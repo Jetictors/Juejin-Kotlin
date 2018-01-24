@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">mime</string>
+
+    <!-- MimeFragment -->
+    <string name="tx_nickname">登陆/注册</string>
+    <string name="tx_job">添加职位 @ 添加公司</string>
+
+    <!-- ArticleCountFragment -->
+    <string name="article_count_title">文章数据统计</string>
+    <string name="tx_article_count">原创%1$s篇 \u2022 分享%2$s篇</string>
+    <string name="tx_collect_count">获得收藏数</string>
+    <string name="tx_read_count">获得阅读数</string>
+    <string name="tx_comment_count">获得评论数</string>
+</resources>

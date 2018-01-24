@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/color_common_bg">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <android.support.v4.widget.CircleImageView
+        android:id="@+id/iv_header"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="@dimen/dp_56"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginTop="@dimen/dp_24"/>
+
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/clr_black"
+        android:textStyle="bold"
+        android:text="@string/app_name"
+        android:layout_marginTop="@dimen/dp_8" />
+
+    <TextView
+        android:id="@+id/tv_article_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/clr_black"
+        android:text="@string/app_name"
+        android:layout_marginTop="@dimen/dp_8" />
+
+    <TextView
+        android:id="@+id/tx_collect_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/clr_black"
+        android:textStyle="bold"
+        android:text="55"
+        android:layout_marginTop="@dimen/dp_36" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:text="@string/tx_collect_count"
+        android:layout_marginTop="@dimen/dp_6" />
+
+    <TextView
+        android:id="@+id/tv_read_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/clr_black"
+        android:textStyle="bold"
+        android:text="1000"
+        android:layout_marginTop="@dimen/dp_36" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:text="@string/tx_read_count"
+        android:layout_marginTop="@dimen/dp_6" />
+
+    <TextView
+        android:id="@+id/tv_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/clr_black"
+        android:textStyle="bold"
+        android:text="20"
+        android:layout_marginTop="@dimen/dp_36" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        android:text="@string/tx_comment_count"
+        android:layout_marginTop="@dimen/dp_6" />
+
+</LinearLayout>

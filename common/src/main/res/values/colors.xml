@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#F4F5F5</color>
+    <color name="colorPrimaryDark">#F4F5F5</color>
+    <color name="colorAccent">#F4F5F5</color>
+
+    <color name="color_common_bg">#F4F5F5</color>
+    <color name="clr_3780F7">#3780F7</color>
+    <color name="clr_B2BAC2">#B2BAC2</color>
+    <color name="clr_line">#F2F2F3</color>
+    <color name="clr_white">@android:color/white</color>
+    <color name="clr_black">@android:color/black</color>
+    <color name="clr_transparent">@android:color/transparent</color>
+
+</resources>
