@@ -2,17 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/main_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0"
-        android:layout_weight="1"
-        android:orientation="vertical" />
+        android:layout_weight="1" />
 
     <include layout="@layout/layout_line" />
 
-    <include layout="layout_main_bottom" />
+    <include layout="@layout/layout_main_bottom"/>
+
+    <!--<com.flyco.tablayout.CommonTabLayout-->
+        <!--android:id="@+id/tl_bottom"-->
+        <!--tl:tl_iconHeight="@dimen/dp_24"-->
+        <!--tl:tl_iconWidth="@dimen/dp_24"-->
+        <!--tl:tl_indicator_height="@dimen/dp_0"-->
+        <!--tl:tl_textSelectColor="@color/clr_3780F7"-->
+        <!--tl:tl_textUnselectColor="@color/clr_72777B"-->
+        <!--tl:tl_textsize="@dimen/sp_12"-->
+        <!--tl:tl_underline_color="#DDDDDD"-->
+        <!--tl:tl_underline_height="@dimen/dp_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/dp_56"-->
+        <!--android:background="@color/clr_white" />-->
 
 </LinearLayout>

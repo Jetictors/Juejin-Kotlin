@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
@@ -67,6 +68,7 @@ dependencies {
     compile rootProject.ext.dependencies["zxing-android-embedded"]
     compile rootProject.ext.dependencies["circular-progress-button-v7"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+
     //rx
     compile rootProject.ext.dependencies["rxjava"]
     compile(rootProject.ext.dependencies["rxandroid"]) {
@@ -118,4 +120,8 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
     //阿里的Arouter的apt注解
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

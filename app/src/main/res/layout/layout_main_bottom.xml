@@ -19,19 +19,19 @@
         android:id="@+id/btn_tab_boil"
         style="@style/MainBottom"
         android:drawableTop="@drawable/ic_launcher"
-        android:text="@string/tx_home"/>
+        android:text="@string/tx_boil"/>
 
     <RadioButton
         android:id="@+id/btn_tab_find"
         style="@style/MainBottom"
         android:drawableTop="@drawable/ic_launcher"
-        android:text="@string/tx_home"/>
+        android:text="@string/tx_find"/>
 
     <RadioButton
         android:id="@+id/btn_tab_mime"
         style="@style/MainBottom"
         android:drawableTop="@drawable/ic_launcher"
-        android:text="@string/tx_home"/>
+        android:text="@string/tx_mime"/>
 
 </RadioGroup>
 
