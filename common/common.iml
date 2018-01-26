@@ -22,6 +22,22 @@
         <option name="PROJECT_TYPE" value="1" />
       </configuration>
     </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.8" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="jvmTarget" value="1.8" />
+          <option name="languageVersion" value="1.1" />
+          <option name="apiVersion" value="1.1" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
@@ -115,13 +131,13 @@
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="com.github.CymChad:BaseRecyclerViewAdapterHelper-2.9.27" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
+    <orderEntry type="library" name="com.flyco.tablayout:FlycoTabLayout_Lib-2.1.2" level="project" />
     <orderEntry type="library" name="com.android.support:appcompat-v7-26.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:26.1.0@jar" level="project" />
     <orderEntry type="library" name="com.squareup.retrofit2:adapter-rxjava2:2.3.0@jar" level="project" />
     <orderEntry type="library" name="com.squareup.okhttp3:logging-interceptor:3.4.2@jar" level="project" />
     <orderEntry type="library" name="jp.wasabeef:glide-transformations-2.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-ui-26.1.0" level="project" />
-    <orderEntry type="library" name="com.github.moduth:blockcanary-android-1.2.1" level="project" />
     <orderEntry type="library" name="com.github.VictorAlbertos.Jolyglot:gson:0.0.3@jar" level="project" />
     <orderEntry type="library" name="com.google.zxing:core:3.3.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="org.hamcrest:hamcrest-core:1.3@jar" level="project" />
@@ -146,6 +162,7 @@
     <orderEntry type="library" name="com.github.VictorAlbertos.Jolyglot:api:0.0.3@jar" level="project" />
     <orderEntry type="library" name="com.github.hackware1993:MagicIndicator-1.5.0" level="project" />
     <orderEntry type="library" name="com.google.dagger:dagger:2.13@jar" level="project" />
+    <orderEntry type="library" name="org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.51@jar" level="project" />
     <orderEntry type="library" name="com.github.VictorAlbertos.RxCache:runtime:1.8.1-2.x@jar" level="project" />
     <orderEntry type="library" name="com.google.code.findbugs:jsr305:3.0.1@jar" level="project" />
     <orderEntry type="library" name="com.github.franmontiel:PersistentCookieJar-v1.0.0" level="project" />
@@ -170,11 +187,12 @@
     <orderEntry type="library" name="com.trello.rxlifecycle2:rxlifecycle-android-2.0.1" level="project" />
     <orderEntry type="library" name="com.trello.rxlifecycle2:rxlifecycle:2.0.1@jar" level="project" />
     <orderEntry type="library" scope="TEST" name="org.hamcrest:hamcrest-library:1.3@jar" level="project" />
+    <orderEntry type="library" name="org.jetbrains.kotlin:kotlin-stdlib:1.1.51@jar" level="project" />
     <orderEntry type="library" name="com.youth.banner:banner-1.4.10" level="project" />
     <orderEntry type="library" scope="TEST" name="com.android.support.test:runner-0.5" level="project" />
     <orderEntry type="library" name="com.sunfusheng:marqueeview-1.3.2" level="project" />
     <orderEntry type="library" name="com.android.support:support-v4-26.1.0" level="project" />
-    <orderEntry type="library" name="com.github.moduth:blockcanary-core-1.2.1" level="project" />
+    <orderEntry type="library" name="org.jetbrains:annotations:13.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:animated-vector-drawable-26.1.0" level="project" />
     <orderEntry type="library" name="io.reactivex.rxjava2:rxjava:2.0.6@jar" level="project" />
     <orderEntry type="library" name="com.trello.rxlifecycle2:rxlifecycle-components-2.0.1" level="project" />

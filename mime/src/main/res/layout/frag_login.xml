@@ -32,14 +32,14 @@
             <EditText
                 android:id="@+id/et_login_user"
                 style="@style/CommonEditView"
-                android:hint="@string/app_name"/>
+                android:hint="@string/hint_phone_email"/>
 
             <include layout="@layout/layout_line"/>
 
             <EditText
                 android:id="@+id/et_login_pwd"
                 style="@style/CommonEditView"
-                android:hint="@string/app_name"/>
+                android:hint="@string/hint_pwd"/>
 
         </LinearLayout>
 
@@ -50,7 +50,7 @@
     <TextView
         android:id="@+id/btn_login"
         style="@style/CommonButton"
-        android:text="@string/app_name" />
+        android:text="@string/btn_login" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
             android:id="@+id/btn_forget_pwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
+            android:text="@string/btn_forget_pwd"
             android:textColor="@color/clr_72777b"
             android:textSize="@dimen/sp_14"
             android:padding="@dimen/dp_12"/>
@@ -71,7 +71,7 @@
             android:id="@+id/btn_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
+            android:text="@string/btn_register_hint"
             android:textColor="@color/clr_3780f7"
             android:textSize="@dimen/sp_14"
             android:layout_alignParentRight="true"
@@ -89,8 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/sp_12"
-            android:textColor="@color/clr_72777b"
-            android:text="@string/app_name"/>
+            android:text="@string/tx_other_login_type"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -120,16 +119,41 @@
 
         </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/cbox_protocol"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="@string/app_name"
+            android:textSize="@dimen/sp_10"
             android:textColor="@color/clr_72777b"
-            android:textSize="@dimen/sp_12"
-            android:checked="true"
+            android:text="@string/hint_logo"
             android:layout_marginTop="@dimen/dp_12"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_12">
+
+            <CheckBox
+                android:id="@+id/cbox_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/tx_cbox"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_10"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/btn_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_10"
+                android:textColor="@color/clr_72777b"
+                android:text="@string/tx_protocol"
+                android:layout_marginLeft="@dimen/dp_3" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -11,4 +11,35 @@
     <string name="tx_collect_count">获得收藏数</string>
     <string name="tx_read_count">获得阅读数</string>
     <string name="tx_comment_count">获得评论数</string>
+
+    <!-- LoginFragment -->
+    <string name="hint_phone_email">邮箱/手机号</string>
+    <string name="hint_pwd">密码</string>
+    <string name="btn_login">登录</string>
+    <string name="btn_forget_pwd">忘记密码?</string>
+    <string name="btn_register_hint">注册账号</string>
+    <string name="tx_other_login_type">其他登陆方式</string>
+    <string name="hint_logo">掘金 - juejin.im</string>
+    <string name="tx_cbox">已阅读并同意</string>
+    <string name="tx_protocol">软件许可服务协议</string>
+
+    <!-- RegisterFragment -->
+    <string name="hint_nickname">昵称</string>
+    <string name="btn_register">注册</string>
+
+
+    <!-- ForgetPwdFragment -->
+    <string name="forget_pwd_title">重置密码</string>
+    <string name="forget_pwd_tab_phone">手机找回</string>
+    <string name="forget_pwd_tab_email">邮箱找回</string>
+    <string name="forget_pwd_phone_hint">输入已绑定的手机号</string>
+    <string name="forget_pwd_email_hint">输入已绑定的邮箱</string>
+    <string name="tx_phone">手机号</string>
+    <string name="hint_img_verify_code">图片验证码</string>
+    <string name="hint_message_verify_code">短信验证码</string>
+    <string name="btn_get_verify_code">获取验证码</string>
+    <string name="tx_new_pwd">新密码</string>
+    <string name="tx_email">邮箱</string>
+    <string name="btn_commit_email">发送重置密码邮件</string>
+    <string name="btn_back_login_page">回到登陆页</string>
 </resources>

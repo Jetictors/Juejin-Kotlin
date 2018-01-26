@@ -34,9 +34,6 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testCompile rootProject.ext.dependencies["junit"]
     provided rootProject.ext.dependencies["javax.annotation"]
-    debugCompile rootProject.ext.dependencies["canary-debug"]
-    testCompile rootProject.ext.dependencies["canary-test"]
-    releaseCompile rootProject.ext.dependencies["canary-release"]
     //dagger2的apt注解
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
     //阿里的Arouter的注解

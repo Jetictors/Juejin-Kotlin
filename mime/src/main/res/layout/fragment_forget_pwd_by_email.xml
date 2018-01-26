@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dp_24">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forget_pwd_email_hint"
+        android:textSize="@dimen/sp_12"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"/>
+
+    <include layout="@layout/layout_line"/>
+
+    <EditText
+        android:id="@+id/et_forget_email"
+        style="@style/CommonEditView"
+        android:hint="@string/app_name"
+        android:paddingLeft="@dimen/dp_12"/>
+
+    <include layout="@layout/layout_line"/>
+
+    <TextView
+        android:id="@+id/btn_commit_email"
+        style="@style/CommonButton"
+        android:text="@string/btn_commit_email" />
+
+    <TextView
+        android:id="@+id/btn_back_login_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_back_login_page"
+        android:textColor="@color/clr_3780f7"
+        android:textSize="@dimen/sp_12"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_24"/>
+
+</LinearLayout>

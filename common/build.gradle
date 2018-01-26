@@ -64,6 +64,7 @@ dependencies {
     compile rootProject.ext.dependencies["fragmentation"]
     compile rootProject.ext.dependencies["MagicIndicator"]
     compile rootProject.ext.dependencies["FlycoDialog_Lib"]
+    compile rootProject.ext.dependencies["FlycoTabLayout_Lib"]
     compile rootProject.ext.dependencies["glide-transformations"]
     compile rootProject.ext.dependencies["zxing-android-embedded"]
     compile rootProject.ext.dependencies["circular-progress-button-v7"]
@@ -103,12 +104,7 @@ dependencies {
     compile rootProject.ext.dependencies["Jolyglot-Gson"]
     compile rootProject.ext.dependencies["multidex"]
     compile rootProject.ext.dependencies["RxCache"]
-//    //db
-//    compile files('libs/ormlite-android-4.49.jar')
-//    compile files('libs/ormlite-core-4.49.jar')
-    //canary
-    debugCompile rootProject.ext.dependencies["blockcanary-debug"]
-    releaseCompile rootProject.ext.dependencies["blockcanary-release"]
+
     //Cookie
     compile rootProject.ext.dependencies["PersistentCookieJar"]
     //di
