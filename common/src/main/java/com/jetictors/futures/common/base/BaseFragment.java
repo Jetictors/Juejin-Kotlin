@@ -34,25 +34,18 @@ import me.yokeyword.fragmentation.anim.FragmentAnimator;
  */
 public abstract class BaseFragment extends SupportFragment implements LifecycleProvider<FragmentEvent>, IDaggerListener {
 
-    private static final Handler handler = new Handler();
-    private Toolbar toolbar;
     protected View mView;
-    private boolean isInited = false;
 
     //_mActivity在SupportFragment中已经在onAttach中绑定了activity可以直接使用
     protected Context mContext;
 
     /**
-     * activity与frament绑定时调用
+     * activity与fragment绑定时调用
      */
     @Override
     public void onAttach(Context context) {
         mContext = context;
         super.onAttach(context);
-    }
-
-    public final Handler getHandler() {
-        return handler;
     }
 
     @Nullable
@@ -79,8 +72,7 @@ public abstract class BaseFragment extends SupportFragment implements LifecycleP
     }
 
     /**
-     * viem 创建的回调
-     *
+     * view 创建的回调
      * @param view
      * @param savedInstanceState
      */
@@ -88,7 +80,6 @@ public abstract class BaseFragment extends SupportFragment implements LifecycleP
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (!useLazy()) {
-            isInited = true;
             initEventAndData(view);
         }
     }
@@ -98,7 +89,6 @@ public abstract class BaseFragment extends SupportFragment implements LifecycleP
     public void onLazyInitView(@Nullable Bundle savedInstanceState) {
         super.onLazyInitView(savedInstanceState);
         if (useLazy()) {
-            isInited = true;
             initEventAndData(mView);
         }
     }
@@ -118,14 +108,14 @@ public abstract class BaseFragment extends SupportFragment implements LifecycleP
             focus.requestFocus();
         }
 
-        getHandler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (viewToFocus == null || viewToFocus.isFocused()) {
-                    showKeyboard(true);
-                }
-            }
-        }, 300);
+//        getHandler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                if (viewToFocus == null || viewToFocus.isFocused()) {
+//                    showKeyboard(true);
+//                }
+//            }
+//        }, 300);
     }
 
     protected void showKeyboard(boolean isShow) {
@@ -270,7 +260,6 @@ public abstract class BaseFragment extends SupportFragment implements LifecycleP
     public void onDestroyView() {
         lifecycleSubject.onNext(FragmentEvent.DESTROY_VIEW);
         super.onDestroyView();
-        toolbar = null;
         mView = null;
         mContext = null;
     }

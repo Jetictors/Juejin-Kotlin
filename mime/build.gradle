@@ -1,39 +1,73 @@
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
+if (isApp.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 
 android {
-    compileSdkVersion 26
-
-
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        if (isApp.toBoolean()) {
+            applicationId "com.jetictors.futures.juejin_kotlin.mime"
+            multiDexEnabled true
+        }
+    }
+
+    if (isApp.toBoolean()) {
+        configurations.all {
+            resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+        }
     }
 
     buildTypes {
         release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
             minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    dexOptions {
+        incremental true
+        jumboMode true
+        preDexLibraries false
     }
 
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:0.5'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["junit"]
+
     implementation project(':common')
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-}
-repositories {
-    mavenCentral()
+
+    //dagger2的apt注解
+    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
+    //阿里的Arouter的注解
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 }

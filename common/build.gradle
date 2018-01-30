@@ -2,27 +2,44 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 26
-
-
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        ndk {
+            abiFilters "armeabi-v7a"
+            abiFilters "x86"
+        }
     }
 
     buildTypes {
         release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
             minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+//            shrinkResources true
+            //加载默认混淆配置文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
 }
 
 dependencies {
@@ -44,38 +61,24 @@ dependencies {
         exclude module: 'support-annotations'
     }
     compile rootProject.ext.dependencies["recyclerview-v7"]
-    compile rootProject.ext.dependencies["palette-v7"]
     compile(rootProject.ext.dependencies["cardview-v7"]) {
         exclude module: 'support-annotations'
     }
-    compile rootProject.ext.dependencies["marqueelibrary"]
-    compile( rootProject.ext.dependencies["vlayout"]) {
-        transitive = true
-    }
-    compile rootProject.ext.dependencies["zxing"]
+
     compile rootProject.ext.dependencies["banner"]
-    compile rootProject.ext.dependencies["percent"]
-    compile rootProject.ext.dependencies["ultra-ptr"]
     compile rootProject.ext.dependencies["flowlayout"]
     compile rootProject.ext.dependencies["photoview"]
-    compile rootProject.ext.dependencies["PickerView"]
     compile rootProject.ext.dependencies["switchbutton"]
-    compile rootProject.ext.dependencies["countdownview"]
     compile rootProject.ext.dependencies["fragmentation"]
-    compile rootProject.ext.dependencies["MagicIndicator"]
     compile rootProject.ext.dependencies["FlycoDialog_Lib"]
     compile rootProject.ext.dependencies["FlycoTabLayout_Lib"]
     compile rootProject.ext.dependencies["glide-transformations"]
     compile rootProject.ext.dependencies["zxing-android-embedded"]
-    compile rootProject.ext.dependencies["circular-progress-button-v7"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
 
     //rx
     compile rootProject.ext.dependencies["rxjava"]
     compile(rootProject.ext.dependencies["rxandroid"]) {
-        exclude module: 'rxjava'
-    }
-    compile(rootProject.ext.dependencies["rxlifecycle"]) {
         exclude module: 'rxjava'
     }
     compile(rootProject.ext.dependencies["rxlifecycle-android"]) {

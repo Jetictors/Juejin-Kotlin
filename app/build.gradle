@@ -3,7 +3,8 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
         applicationId "com.jetictors.futures.juejin_kotlin"
         minSdkVersion rootProject.ext.android.minSdkVersion
@@ -21,17 +22,63 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        config {
+            v1SigningEnabled false
+            v2SigningEnabled false
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('C:/Users/Jetictors/Desktop/fy_joys_android_app.jks')
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
             minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.1'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+
+    }
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    dexOptions {
+        incremental true
+        jumboMode true
+        preDexLibraries false
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
     }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testCompile rootProject.ext.dependencies["junit"]
     provided rootProject.ext.dependencies["javax.annotation"]
     //dagger2的apt注解
@@ -39,5 +86,8 @@ dependencies {
     //阿里的Arouter的注解
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     implementation project(':common')
+    implementation project(':home')
+    implementation project(':boil')
+    implementation project(':find')
     implementation project(':mime')
 }

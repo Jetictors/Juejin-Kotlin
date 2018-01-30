@@ -15,4 +15,8 @@ interface IBaseView{
 
     fun getAContext(): Context
 
+    fun showDialog()
+
+    fun dissmissDialog()
+
 }

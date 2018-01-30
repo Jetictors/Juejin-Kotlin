@@ -1,6 +1,5 @@
 package com.jetictors.futures.common.base
 
-import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.support.annotation.CallSuper
@@ -22,12 +21,8 @@ import me.yokeyword.fragmentation.SupportActivity
  */
 abstract class BaseActivity : SupportActivity(), LifecycleProvider<ActivityEvent>, IDaggerListener {
 
-    protected abstract var mContext: Context
-
     // 重写RxLife控制生命周期
     private val lifecycleSubject = BehaviorSubject.create<ActivityEvent>()
-
-    protected abstract val layout: Int
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -37,14 +32,16 @@ abstract class BaseActivity : SupportActivity(), LifecycleProvider<ActivityEvent
 
         lifecycleSubject.onNext(ActivityEvent.CREATE)
 
-        if (layout > 0) {
-            setContentView(layout)
+        if (getLayout() > 0) {
+            setContentView(getLayout())
         }
-
-        mContext = this
 
         initEventAndData(savedInstanceState)
     }
+
+    protected abstract fun initEventAndData(savedInstanceState: Bundle?)
+
+    protected abstract fun getLayout() : Int
 
     override fun onDestroy() {
         lifecycleSubject.onNext(ActivityEvent.DESTROY)
@@ -62,8 +59,6 @@ abstract class BaseActivity : SupportActivity(), LifecycleProvider<ActivityEvent
     protected fun isCompatible(apiLevel: Int): Boolean {
         return Build.VERSION.SDK_INT >= apiLevel
     }
-
-    protected abstract fun initEventAndData(savedInstanceState: Bundle?)
 
     @CheckResult
     override fun lifecycle(): Observable<ActivityEvent> {

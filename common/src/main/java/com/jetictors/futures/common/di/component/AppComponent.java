@@ -26,13 +26,5 @@ public interface AppComponent {
 
     HttpHelper httpHelper();  //提供http的帮助类
 
-//    DatabaseHelper dtabaseHelper();  //提供http的帮助类
-    /**
-     * {@link Random} instance from {@link AppModule}
-     * which now can be injected to children
-     * that depend on {@link AppComponent}.
-     */
-//    Random random();
-
     RxCache getRxCache();
 }

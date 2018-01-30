@@ -2,8 +2,26 @@
     <string name="app_name">mime</string>
 
     <!-- MimeFragment -->
-    <string name="tx_nickname">登陆/注册</string>
-    <string name="tx_job">添加职位 @ 添加公司</string>
+    <string name="tx_tab_message">消息中心</string>
+    <string name="tx_tab_like">我喜欢的</string>
+    <string name="tx_tab_collect">收藏集</string>
+    <string name="tx_tab_buy">已购</string>
+    <string name="tx_tab_read_article">阅读过的文章</string>
+    <string name="tx_tab_manager">标签管理</string>
+    <string name="tx_tab_feedback">意见反馈</string>
+    <string name="tx_tab_set">设置</string>
+    <string name="tx_message">消息中心</string>
+
+    <!-- MimeInfoFragment -->
+    <string name="tx_mime_follow_count">关注</string>
+    <string name="tx_other_follow_count">关注者</string>
+    <string name="tx_edit_mime">编辑</string>
+    <string name="mime_tx_tab_trends">动态</string>
+    <string name="mime_tx_tab_boil">沸点</string>
+    <string name="mime_tx_tab_original_article">原创文章</string>
+    <string name="mime_tx_tab_share_article">分享文章</string>
+    <string name="mime_tx_tab_like_article">喜欢的文章</string>
+    <string name="mime_tx_tab_follow_tab">关注的标签</string>
 
     <!-- ArticleCountFragment -->
     <string name="article_count_title">文章数据统计</string>
@@ -11,6 +29,9 @@
     <string name="tx_collect_count">获得收藏数</string>
     <string name="tx_read_count">获得阅读数</string>
     <string name="tx_comment_count">获得评论数</string>
+
+    <!-- TrendsFragment -->
+
 
     <!-- LoginFragment -->
     <string name="hint_phone_email">邮箱/手机号</string>

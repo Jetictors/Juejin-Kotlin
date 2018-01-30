@@ -27,7 +27,6 @@ class BaseApplication : MultiDexApplication(){
         //        LeakCanary.install(this);
         //保存appcotext的实例
         AppContext.init(this)
-        AppUtil.syncIsDebug(this.applicationContext)//判断是否是debug模式
 
         // init tools
 
@@ -91,12 +90,11 @@ class BaseApplication : MultiDexApplication(){
 
     override fun onLowMemory() {
         super.onLowMemory()
-        ImageLoaderManager.getInstance().cleanMemory(this)
     }
 
     companion object {
 
-        protected var instance: BaseApplication
+        protected lateinit var instance: BaseApplication
 
         val appComponent: AppComponent
             get() = DaggerAppComponent.builder()

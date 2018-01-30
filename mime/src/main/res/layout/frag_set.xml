@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <include layout="@layout/layout_line"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_width="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:background="@color/clr_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_line" />
+
+    <include layout="@layout/layout_line"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_width="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:background="@color/clr_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_line" />
+
+    <include layout="@layout/layout_line"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_width="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:background="@color/clr_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_12" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:src="@drawable/ic_launcher" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_line" />
+
+    <include layout="@layout/layout_line"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_height="@dimen/dp_0.5"
+        android:layout_width="match_parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/clr_white"
+        android:textColor="@color/clr_fa6c51"
+        android:textSize="@dimen/sp_14"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:paddingTop="@dimen/dp_8"
+        android:paddingBottom="@dimen/dp_8" />
+
+    <include layout="@layout/layout_line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="@string/hint_logo"
+        android:textColor="@color/clr_72777b"
+        android:textSize="@dimen/sp_10" />
+
+</LinearLayout>

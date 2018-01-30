@@ -35,14 +35,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/clr_black"
-                android:text="@string/tx_nickname"
                 android:textSize="@dimen/sp_16" />
 
             <TextView
                 android:id="@+id/tx_job"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tx_job"
                 android:textSize="@dimen/sp_13" />
 
         </LinearLayout>
