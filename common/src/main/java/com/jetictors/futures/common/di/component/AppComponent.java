@@ -3,6 +3,7 @@ package com.jetictors.futures.common.di.component;
 import com.jetictors.futures.common.base.BaseApplication;
 import com.jetictors.futures.common.di.ContextLife;
 import com.jetictors.futures.common.di.module.AppModule;
+import com.jetictors.futures.common.net.HttpHelper;
 
 import java.util.Random;
 
@@ -26,5 +27,5 @@ public interface AppComponent {
 
     HttpHelper httpHelper();  //提供http的帮助类
 
-    RxCache getRxCache();
+//    RxCache getRxCache();
 }

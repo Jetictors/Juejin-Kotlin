@@ -6,3 +6,4 @@ package com.jetictors.futures.mime.mime.ui
  * time    :  2018/1/29 17:16
  * version : v1.0.1
  */
+class AritcleCountFragment{}

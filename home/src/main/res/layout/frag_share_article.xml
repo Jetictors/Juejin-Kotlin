@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_bg">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_12"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_url"
+            style="@style/CommonEditView"
+            android:drawableLeft="@drawable/fragmentation_ic_right"
+            android:hint="@string/app_name"
+            android:drawablePadding="@dimen/dp_12"/>
+
+        <include layout="@layout/layout_line"/>
+
+        <EditText
+            android:id="@+id/et_title"
+            style="@style/CommonEditView"
+            android:drawableLeft="@drawable/fragmentation_ic_right"
+            android:hint="@string/app_name"
+            android:drawablePadding="@dimen/dp_12"/>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_6">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fragmentation_ic_stack" />
+
+            <EditText
+                android:id="@+id/et_idea"
+                android:layout_height="@dimen/dp_56"
+                style="@style/CommonEditView"
+                android:textColorHint="@color/clr_72777b"
+                android:hint="@string/app_name"
+                android:gravity="top"
+                android:layout_marginLeft="@dimen/dp_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_12"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_12">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fragmentation_ic_stack"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/dp_12">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/clr_72777b"
+                android:textSize="@dimen/sp_14"/>
+
+            <com.zhy.view.flowlayout.FlowLayout
+                android:id="@+id/fl_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12">
+
+
+
+            </com.zhy.view.flowlayout.FlowLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

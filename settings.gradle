@@ -1,1 +1,1 @@
-include ':app', ':mime', ':common'
+include ':app', ':mime', ':common', ':boil', ':find', ':home'

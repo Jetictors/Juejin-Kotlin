@@ -19,4 +19,8 @@
         <item name="android:gravity">center</item>
     </style>
 
+    <style name="SplashTheme" parent="AppTheme">
+        <!--<item name="android:windowBackground">@mipmap/background_splash</item>-->
+    </style>
+
 </resources>

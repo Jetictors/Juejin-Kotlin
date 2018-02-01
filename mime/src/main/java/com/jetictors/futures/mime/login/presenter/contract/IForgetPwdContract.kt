@@ -27,6 +27,5 @@ interface IForgetPwdContract {
     }
 
     interface IForgetPwdModel : IBaseModel {
-
     }
 }

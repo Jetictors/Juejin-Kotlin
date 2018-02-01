@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Juejin-Kotlin</string>
+    <string name="app_name">仿-掘金</string>
 
     <string name="tx_home">首页</string>
     <string name="tx_boil">沸点</string>

@@ -1,12 +1,11 @@
 package com.jetictors.futures.common.di.module;
 
-import android.support.annotation.NonNull;
-
 import com.jetictors.futures.common.base.BaseApplication;
 import com.jetictors.futures.common.di.ContextLife;
+import com.jetictors.futures.common.net.HttpHelper;
+import com.jetictors.futures.common.net.IDataHelper;
 
 import java.io.File;
-import java.util.Random;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -23,6 +22,7 @@ import io.victoralbertos.jolyglot.GsonSpeaker;
  */
 @Module
 public class AppModule {
+
     private final BaseApplication application;
 
     public AppModule(BaseApplication application) {
@@ -52,11 +52,11 @@ public class AppModule {
 //        return new DatabaseHelper(application);
 //    }
 
-    @Provides @NonNull
-    @Singleton
-    public Random random() {
-        return new Random();
-    }
+//    @Provides @NonNull
+//    @Singleton
+//    public Random random() {
+//        return new Random();
+//    }
 
     /**
      * 提供 {@link RxCache}
@@ -64,12 +64,12 @@ public class AppModule {
      * @param cacheDirectory RxCache缓存路径
      * @return
      */
-    @Singleton
-    @Provides
-    RxCache provideRxCache(@Named("RxCacheDirectory") File cacheDirectory) {
-        RxCache.Builder builder = new RxCache.Builder();
-        return builder
-                .persistence(cacheDirectory, new GsonSpeaker());
-    }
+//    @Singleton
+//    @Provides
+//    RxCache provideRxCache(@Named("RxCacheDirectory") File cacheDirectory) {
+//        RxCache.Builder builder = new RxCache.Builder();
+//        return builder
+//                .persistence(cacheDirectory, new GsonSpeaker());
+//    }
 
 }

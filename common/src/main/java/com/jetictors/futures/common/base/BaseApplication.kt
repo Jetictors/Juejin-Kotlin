@@ -9,6 +9,10 @@ import android.support.multidex.MultiDexApplication
 import com.alibaba.android.arouter.launcher.ARouter
 import com.jetictors.futures.common.di.component.AppComponent
 import com.jetictors.futures.common.di.module.AppModule
+import com.jetictors.futures.common.utils.AppContext
+import com.jetictors.futures.common.utils.AppManager
+import com.jetictors.futures.common.utils.AppUtil
+import com.jetictors.futures.common.utils.ScreenUtil
 
 
 import me.yokeyword.fragmentation.Fragmentation
@@ -18,7 +22,7 @@ import me.yokeyword.fragmentation.Fragmentation
  * 创建时间   2017/3/23 18:03
  * 描述	      基类app
  */
-class BaseApplication : MultiDexApplication(){
+public class BaseApplication : MultiDexApplication(){
 
     override fun onCreate() {
         super.onCreate()
@@ -53,7 +57,7 @@ class BaseApplication : MultiDexApplication(){
 
         //添加一个intentsetvice服务来初始化一些服务
         InitializeService.start(this)
-        ImageLoaderManager.getInstance().init(this)
+//        ImageLoaderManager.getInstance().init(this)
         registerActivityLifecycleCallbacks(SwitchBackgroundCallbacks())
     }
 
@@ -96,9 +100,10 @@ class BaseApplication : MultiDexApplication(){
 
         protected lateinit var instance: BaseApplication
 
-        val appComponent: AppComponent
-            get() = DaggerAppComponent.builder()
-                    .appModule(AppModule(instance))
-                    .build()
+//        fun getAppComponent() : AppComponent{
+//            return DaggerAppComponent.builder()
+//                    .appModule(AppModule(instance))
+//                    .build()
+//        }
     }
 }
