@@ -11,7 +11,6 @@ import java.lang.annotation.RetentionPolicy.RUNTIME
  * 时间 ：2017/3/21 10:52
  * 描述 ：TODO 请描述该类职责
  */
-
 @Scope
 @Retention(RUNTIME)
 annotation class FragmentScope

@@ -49,7 +49,6 @@ android {
     aaptOptions.useNewCruncher = false
 
     dexOptions {
-        incremental true
         jumboMode true
         preDexLibraries false
     }

@@ -20,14 +20,12 @@ class SplashFragment : BaseFragment(){
     }
 
     override fun initInject(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return 0
     }
 
     override fun initEventAndData(view: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

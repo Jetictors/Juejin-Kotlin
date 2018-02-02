@@ -13,6 +13,7 @@ class MainActivity : BaseActivity() {
 
     override fun initInject(savedInstanceState: Bundle?) {
         // 用于dagger2的依赖注入的
+
     }
 
     override fun getLayout(): Int {

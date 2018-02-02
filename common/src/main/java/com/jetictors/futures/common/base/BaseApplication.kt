@@ -1,13 +1,12 @@
 package com.jetictors.futures.common.base
 
-
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
-import android.support.multidex.MultiDexApplication
 
 import com.alibaba.android.arouter.launcher.ARouter
 import com.jetictors.futures.common.di.component.AppComponent
+import com.jetictors.futures.common.di.component.DaggerAppComponent
 import com.jetictors.futures.common.di.module.AppModule
 import com.jetictors.futures.common.utils.AppContext
 import com.jetictors.futures.common.utils.AppManager
@@ -22,7 +21,7 @@ import me.yokeyword.fragmentation.Fragmentation
  * 创建时间   2017/3/23 18:03
  * 描述	      基类app
  */
-public class BaseApplication : MultiDexApplication(){
+open class BaseApplication : Application(){
 
     override fun onCreate() {
         super.onCreate()
@@ -32,7 +31,9 @@ public class BaseApplication : MultiDexApplication(){
         //保存appcotext的实例
         AppContext.init(this)
 
-        // init tools
+        appComponent = DaggerAppComponent.builder()
+                .appModule(AppModule(instance))
+                .build()
 
         ScreenUtil.init(this)
 
@@ -100,10 +101,6 @@ public class BaseApplication : MultiDexApplication(){
 
         protected lateinit var instance: BaseApplication
 
-//        fun getAppComponent() : AppComponent{
-//            return DaggerAppComponent.builder()
-//                    .appModule(AppModule(instance))
-//                    .build()
-//        }
+        lateinit var appComponent : AppComponent
     }
 }

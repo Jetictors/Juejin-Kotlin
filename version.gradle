@@ -35,7 +35,6 @@ ext {
             VAvi_loading           : "2.1.3",
             VJpush                 : "3.0.5",
             VJcore                 : "1.1.2",
-            VMultidex              : "1.0.1",
             VRxCache               : "1.8.1-2.x",
             VJolyglotGson          : "0.0.3",
 
@@ -113,13 +112,14 @@ ext {
             "logger"                       : "com.orhanobut:logger:${android["VLogger"]}",
             "eventbus"                     : "org.greenrobot:eventbus:${android["VEventbus"]}",
             "avi-loading"                  : "com.wang.avi:library:${android["VAvi_loading"]}",
-            "multidex"                     : "com.android.support:multidex:${android["VMultidex"]}",
             "RxCache"                      : "com.github.VictorAlbertos.RxCache:runtime:${android["VRxCache"]}",
             "Jolyglot-Gson"                : "com.github.VictorAlbertos.Jolyglot:gson:${android["VJolyglotGson"]}",
 
             //di
             "javax.annotation"             : 'javax.annotation:jsr250-api:1.0',
-            "dagger"                       : "com.google.dagger:dagger:${android["VDagger"]}",
+            "dagger-android"               : "com.google.dagger:dagger-android:${android["VDagger"]}",
+            "dagger-android-support"       : "com.google.dagger:dagger-android-support:${android["VDagger"]}",
+            "dagger-android-processor"     : "com.google.dagger:dagger-android-processor:${android["VDagger"]}",
             "dagger-compiler"              : "com.google.dagger:dagger-compiler:${android["VDagger"]}",
 
             // router路由框架

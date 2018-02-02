@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
@@ -35,8 +36,27 @@ android {
         }
     }
 
+    dexOptions {
+        jumboMode true
+        preDexLibraries false
+        javaMaxHeapSize '4g'
+    }
+
     lintOptions {
         abortOnError false
+        checkReleaseBuilds false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlin {
+        experimental {
+            //启用协程
+            coroutines 'enable'
+        }
     }
 
     aaptOptions.cruncherEnabled = false
@@ -106,18 +126,19 @@ dependencies {
     //other
     compile rootProject.ext.dependencies["rxpermissions"]
     compile rootProject.ext.dependencies["Jolyglot-Gson"]
-    compile rootProject.ext.dependencies["multidex"]
     compile rootProject.ext.dependencies["RxCache"]
 
     //Cookie
     compile rootProject.ext.dependencies["PersistentCookieJar"]
     //di
-    compile rootProject.ext.dependencies["dagger"]
+    compile rootProject.ext.dependencies["dagger-android"]
+    compile rootProject.ext.dependencies["dagger-android-support"]
     compile rootProject.ext.dependencies["arouter-api"]
 //    compile rootProject.ext.dependencies["retrofit-converter-jackson"]
     provided rootProject.ext.dependencies["javax.annotation"]
     //dagger2的apt注解
-    annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+    kapt rootProject.ext.dependencies["dagger-compiler"]
+    kapt rootProject.ext.dependencies["dagger-android-processor"]
     //阿里的Arouter的apt注解
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
