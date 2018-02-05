@@ -7,7 +7,7 @@ import com.jetictors.futures.common.base.BaseFragment
 import com.jetictors.futures.common.widgets.bottombar.BottomBar
 import com.jetictors.futures.common.widgets.bottombar.BottomBarTab
 import com.jetictors.futures.find.find.ui.FindFragment
-import com.jetictors.futures.home.ui.HomeFragment
+import com.jetictors.futures.home.home.ui.HomeFragment
 import com.jetictors.futures.juejin_kotlin.R
 import com.jetictors.futures.mime.mime.ui.MimeFragment
 import kotlinx.android.synthetic.main.frag_main.*
@@ -83,6 +83,7 @@ class MainFragment : BaseFragment() {
     }
 
     override fun initInject(savedInstanceState: Bundle?) {
+
         if (savedInstanceState == null) {
 
             mFragments[INDEX_FIRST] = HomeFragment.newInstance()

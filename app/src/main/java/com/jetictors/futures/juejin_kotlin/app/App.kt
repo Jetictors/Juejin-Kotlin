@@ -17,21 +17,34 @@ import com.jetictors.futures.common.utils.AsLibUtil
  */
 class App : BaseApplication() {
 
-    @Autowired(name = "/home/application1")
-    internal var mApplicationLikeMoudle1: ApplicationLike? = null
-    @Autowired(name = "/my/application2")
-    internal var mApplicationLikeMoudle2: ApplicationLike? = null
+    @Autowired(name = "/home/applicationFirst")
+    internal var mApplicationLikeModuleFirst: ApplicationLike? = null
+    @Autowired(name = "/boil/applicationSecond")
+    internal var mApplicationLikeModuleSecond: ApplicationLike? = null
+    @Autowired(name = "/find/applicationThird")
+    internal var mApplicationLikeModuleThird: ApplicationLike? = null
+    @Autowired(name = "/mime/applicationFourth")
+    internal var mApplicationLikeModuleFourth: ApplicationLike? = null
 
     override fun onCreate() {
         super.onCreate()
 
         ARouter.getInstance().inject(this)
-        if (mApplicationLikeMoudle1 != null) {
-            AsLibUtil.addAsLIbChild(mApplicationLikeMoudle1)
+
+        if (mApplicationLikeModuleFirst != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleFirst)
         }
 
-        if (mApplicationLikeMoudle2 != null) {
-            AsLibUtil.addAsLIbChild(mApplicationLikeMoudle2)
+        if (mApplicationLikeModuleSecond != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleSecond)
+        }
+
+        if (mApplicationLikeModuleThird != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleThird)
+        }
+
+        if (mApplicationLikeModuleFourth != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleFourth)
         }
 
         AsLibUtil.doCreateAsLibrary(this)

@@ -1,4 +1,4 @@
-package com.jetictors.futures.home.ui
+package com.jetictors.futures.home.home.ui
 
 import android.os.Bundle
 import android.view.View
