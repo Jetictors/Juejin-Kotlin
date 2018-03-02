@@ -3,6 +3,7 @@ package com.jetictors.futures.find.find.ui
 import android.os.Bundle
 import android.view.View
 import com.jetictors.futures.common.base.BaseFragment
+import com.jetictors.futures.find.R
 
 /**
  * @描述    :    发现
@@ -20,14 +21,12 @@ class FindFragment : BaseFragment() {
     }
 
     override fun initInject(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return R.layout.frag_find
     }
 
     override fun initEventAndData(view: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

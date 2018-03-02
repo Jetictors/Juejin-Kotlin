@@ -36,10 +36,26 @@
 
             <include layout="@layout/layout_line"/>
 
-            <EditText
-                android:id="@+id/et_register_pwd"
-                style="@style/CommonEditView"
-                android:hint="@string/hint_pwd"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingRight="@dimen/dp_24">
+
+                <EditText
+                    android:id="@+id/et_register_pwd"
+                    style="@style/CommonEditView"
+                    android:hint="@string/hint_pwd"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/btn_show_pwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fragmentation_ic_right"/>
+
+            </LinearLayout>
 
             <include layout="@layout/layout_line"/>
 

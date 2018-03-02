@@ -15,12 +15,13 @@ import io.rx_cache2.internal.RxCache
  * 时间 ：2017/3/21 10:53
  * 描述 ：App的注解使用,限定Context的范围,以及依赖BaseDataRepository注入的范围
  */
+
 @Singleton
-@Component(modules = arrayOf(AppModule::class))
+@Component(modules = [(AppModule::class)])
 interface AppComponent {
 
     @get:ContextLife("Application")
-    val context: BaseApplication  // 提供App的Context
+    val context: BaseApplication   // 提供App的Context
 
     val rxCache: RxCache           // 缓存
 

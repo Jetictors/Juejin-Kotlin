@@ -1,18 +1,16 @@
 package com.jetictors.futures.juejin_kotlin.ui
 
 import android.os.Bundle
+import android.support.annotation.Nullable
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.Window
-import com.jetictors.futures.common.Constants
 import com.jetictors.futures.common.base.BaseActivity
-import com.jetictors.futures.common.utils.SPHelper
 import com.jetictors.futures.juejin_kotlin.R
 
 class MainActivity : BaseActivity() {
 
-    override fun initInject(savedInstanceState: Bundle?) {
-        // 用于dagger2的依赖注入的
+    override fun initInject(@Nullable savedInstanceState: Bundle?) {
 
     }
 
@@ -21,10 +19,10 @@ class MainActivity : BaseActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         // 去除标题栏
-        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         setTheme(R.style.AppTheme)
+        super.onCreate(savedInstanceState)
     }
 
     override fun initEventAndData(savedInstanceState: Bundle?) {
@@ -57,21 +55,22 @@ class MainActivity : BaseActivity() {
 
     private fun initView(savedInstanceState: Bundle?) {
          if (savedInstanceState == null){
+             loadRootFragment(R.id.fl_container,MainFragment.newInstance())
              // 检测是否为第一次安装
-             if (SPHelper.get(this, Constants.AppVersion.APP_VERSION,"",SPHelper.VERSION_FILE_NAME)
-                     .equals("")){
-                 loadRootFragment(R.id.fl_container,SplashFragment.newInstance())
-             }else{
-                 loadRootFragment(R.id.fl_container,MainFragment.newInstance())
-             }
+//             if (false){
+//                 loadRootFragment(R.id.fl_container,SplashFragment.newInstance())
+//             }else{
+//                 loadRootFragment(R.id.fl_container,MainFragment.newInstance())
+//             }
 
          }else{
-             if (SPHelper.get(this, Constants.AppVersion.APP_VERSION,"",SPHelper.VERSION_FILE_NAME)
-                     .equals("")){
-                 loadRootFragment(R.id.fl_container,findFragment(SplashFragment::class.java))
-             }else{
-                 loadRootFragment(R.id.fl_container,findFragment(MainFragment::class.java))
-             }
+             loadRootFragment(R.id.fl_container,findFragment(MainFragment::class.java))
+//             if (SPHelper.get(this, Constants.AppVersion.APP_VERSION,"",SPHelper.VERSION_FILE_NAME)
+//                     .equals("")){
+//                 loadRootFragment(R.id.fl_container,findFragment(SplashFragment::class.java))
+//             }else{
+//                 loadRootFragment(R.id.fl_container,findFragment(MainFragment::class.java))
+//             }
 
          }
     }

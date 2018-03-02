@@ -21,21 +21,10 @@ import me.yokeyword.fragmentation.SupportFragment
  */
 class MainFragment : BaseFragment() {
 
-    private val mTitles: Array<String> by lazy {
-        arrayOf(
-                getString(R.string.tx_home), getString(R.string.tx_boil),
-                getString(R.string.tx_find), getString(R.string.tx_mime)
-        )
-    }
-
-    private val mIcons: Array<Int> by lazy {
-        arrayOf(
-                R.mipmap.ic_launcher, R.mipmap.ic_launcher,
-                R.mipmap.ic_launcher, R.mipmap.ic_launcher
-        )
-    }
-
-    private lateinit var mFragments: Array<SupportFragment>
+    /*
+        底部栏item的当前下标
+     */
+    private var currentIndex = -1
 
     companion object {
 
@@ -50,6 +39,22 @@ class MainFragment : BaseFragment() {
         }
     }
 
+    private val mTitles: Array<String> by lazy {
+        arrayOf(
+                getString(R.string.tx_home), getString(R.string.tx_boil),
+                getString(R.string.tx_find), getString(R.string.tx_mime)
+        )
+    }
+
+    private val mIcons: Array<Int> by lazy {
+        arrayOf(
+                R.drawable.abc_ic_star_black_48dp, R.drawable.abc_ic_star_black_48dp,
+                R.drawable.abc_ic_star_black_48dp, R.drawable.abc_ic_star_black_48dp
+        )
+    }
+
+    private var mFragments: Array<SupportFragment?> = arrayOfNulls<SupportFragment>(4)
+
     override fun getLayoutId(): Int {
         return R.layout.frag_main
     }
@@ -62,24 +67,26 @@ class MainFragment : BaseFragment() {
     private fun initListener() {
         bottomBar.setOnTabSelectedListener(object : BottomBar.OnTabSelectedListener {
             override fun onTabUnselected(position: Int) {
+
             }
 
             override fun onTabReselected(position: Int) {
+
             }
 
             override fun onTabSelected(position: Int, prePosition: Int): Boolean {
-                return true
+                showHideFragment(mFragments[position], mFragments[prePosition])
+                return false
             }
-
         })
     }
 
     private fun initData() {
 
-        bottomBar.addItem(BottomBarTab(_mActivity, mIcons[0], mTitles[INDEX_THIRD]))
-                .addItem(BottomBarTab(_mActivity, mIcons[1], mTitles[INDEX_SECOND]))
-                .addItem(BottomBarTab(_mActivity, mIcons[2], mTitles[INDEX_THIRD]))
-                .addItem(BottomBarTab(_mActivity, mIcons[3], mTitles[INDEX_FOURTH]))
+        bottomBar.addItem(BottomBarTab(_mActivity, mIcons[INDEX_FIRST], mTitles[INDEX_FIRST]))
+                .addItem(BottomBarTab(_mActivity, mIcons[INDEX_SECOND], mTitles[INDEX_SECOND]))
+                .addItem(BottomBarTab(_mActivity, mIcons[INDEX_THIRD], mTitles[INDEX_THIRD]))
+                .addItem(BottomBarTab(_mActivity, mIcons[INDEX_FOURTH], mTitles[INDEX_FOURTH]))
     }
 
     override fun initInject(savedInstanceState: Bundle?) {
@@ -93,9 +100,7 @@ class MainFragment : BaseFragment() {
 
             // 判断是否登录
             var loadIndex = INDEX_FIRST
-            if (true) {
-
-            } else {
+            if (false) {
                 loadIndex = INDEX_THIRD
             }
 
@@ -111,11 +116,11 @@ class MainFragment : BaseFragment() {
     override fun onBackPressedSupport(): Boolean {
 
         // 在已登录的情况下，设置成首页，反之，退出程序
-        if (true) {
-            bottomBar.setCurrentItem(0)
-        } else {
-
-        }
+//        if (true) {
+//            bottomBar.setCurrentItem(0)
+//        } else {
+//
+//        }
         return true
     }
 }

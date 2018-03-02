@@ -4,6 +4,7 @@ import android.os.Build
 import android.os.Bundle
 import android.support.annotation.CallSuper
 import android.support.annotation.CheckResult
+import android.support.annotation.Nullable
 import com.jetictors.futures.common.fmarework.IDaggerListener
 import com.trello.rxlifecycle2.LifecycleProvider
 import com.trello.rxlifecycle2.LifecycleTransformer
@@ -24,7 +25,7 @@ abstract class BaseActivity : SupportActivity(), LifecycleProvider<ActivityEvent
     // 重写RxLife控制生命周期
     private val lifecycleSubject = BehaviorSubject.create<ActivityEvent>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(@Nullable savedInstanceState: Bundle?) {
 
         initInject(savedInstanceState)
 

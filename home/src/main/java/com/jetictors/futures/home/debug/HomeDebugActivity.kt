@@ -4,7 +4,7 @@ import android.os.Bundle
 
 import com.jetictors.futures.common.base.BaseActivity
 import com.jetictors.futures.home.R
-import com.jetictors.futures.home.ui.HomeFragment
+import com.jetictors.futures.home.home.ui.HomeFragment
 
 /**
  * 创建者     邓浩宸

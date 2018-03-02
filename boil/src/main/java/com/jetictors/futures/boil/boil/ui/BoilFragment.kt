@@ -2,6 +2,7 @@ package com.jetictors.futures.boil.boil.ui
 
 import android.os.Bundle
 import android.view.View
+import com.jetictors.futures.boil.R
 import com.jetictors.futures.common.base.BaseFragment
 
 /**
@@ -20,14 +21,14 @@ class BoilFragment : BaseFragment() {
     }
 
     override fun initInject(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return R.layout.frag_boil
     }
 
     override fun initEventAndData(view: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 }

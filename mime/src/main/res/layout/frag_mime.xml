@@ -14,9 +14,10 @@
         android:background="@color/clr_white"
         android:orientation="horizontal"
         android:padding="@dimen/dp_12"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/dp_12">
 
-        <android.support.v4.widget.CircleImageView
+        <com.jetictors.futures.common.widgets.CircleImageView
             android:id="@+id/iv_header"
             android:layout_width="@dimen/dp_56"
             android:layout_height="@dimen/dp_56"
@@ -28,7 +29,7 @@
             android:orientation="vertical"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:paddingLeft="@dimen/dp_12">
+            android:paddingStart="@dimen/dp_12">
 
             <TextView
                 android:id="@+id/tx_nickname"
@@ -52,6 +53,6 @@
 
     </LinearLayout>
 
-    <include layout="layout_rv"/>
+    <include layout="@layout/layout_rv"/>
 
 </LinearLayout>

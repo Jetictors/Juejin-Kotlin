@@ -3,6 +3,8 @@ if (isApp.toBoolean()) {
 } else {
     apply plugin: 'com.android.library'
 }
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -73,15 +75,17 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-//        exclude group: 'com.android.support', module: 'support-annotations'
-//    })
-//    testCompile rootProject.ext.dependencies["junit"]
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':common')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["junit"]
+
+    compile project(':common')
 
     //dagger2的apt注解
+    provided rootProject.ext.dependencies["javax.annotation"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
 
     //阿里的Arouter的注解

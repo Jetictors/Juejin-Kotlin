@@ -20,6 +20,7 @@
     </style>
 
     <style name="SplashTheme" parent="AppTheme">
+        <!--<item name="android:windowNoTitle">true</item>-->
         <!--<item name="android:windowBackground">@mipmap/background_splash</item>-->
     </style>
 

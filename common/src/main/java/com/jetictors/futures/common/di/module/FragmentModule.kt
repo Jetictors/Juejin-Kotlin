@@ -14,6 +14,7 @@ import dagger.Provides
  * 时间 ：2017/3/21 10:53
  * 描述 ：TODO 请描述该类职责
  */
+
 @Module
 class FragmentModule(private val fragment: Fragment) {
 

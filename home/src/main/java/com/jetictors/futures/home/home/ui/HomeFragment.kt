@@ -3,6 +3,7 @@ package com.jetictors.futures.home.home.ui
 import android.os.Bundle
 import android.view.View
 import com.jetictors.futures.common.base.BaseFragment
+import com.jetictors.futures.home.R
 
 /**
  * @描述    :    首页fragment
@@ -20,14 +21,14 @@ class HomeFragment : BaseFragment(){
     }
 
     override fun getLayoutId(): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return R.layout.frag_home
     }
 
     override fun initEventAndData(view: View?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun initInject(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 }

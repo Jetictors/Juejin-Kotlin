@@ -62,79 +62,83 @@ android {
     aaptOptions.useNewCruncher = false
 }
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-//        exclude group: 'com.android.support', module: 'support-annotations'
-//    })
-    //test
-//    testCompile rootProject.ext.dependencies["junit"]
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile rootProject.ext.dependencies["junit"]
+
     //ui
-    api(rootProject.ext.dependencies["appcompat-v7"]) {
+    compile(rootProject.ext.dependencies["appcompat-v7"]) {
         exclude module: 'support-annotations'
         exclude module: 'support-v4'
     }
-    api(rootProject.ext.dependencies["support-v4"]) {
+    compile(rootProject.ext.dependencies["support-v4"]) {
         exclude module: 'support-annotations'
     }
-    api(rootProject.ext.dependencies["design"]) {
+    compile(rootProject.ext.dependencies["design"]) {
         exclude module: 'support-annotations'
     }
-    api rootProject.ext.dependencies["recyclerview-v7"]
-    api(rootProject.ext.dependencies["cardview-v7"]) {
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile(rootProject.ext.dependencies["cardview-v7"]) {
         exclude module: 'support-annotations'
     }
-    api rootProject.ext.dependencies["banner"]
-    api rootProject.ext.dependencies["flowlayout"]
-    api rootProject.ext.dependencies["photoview"]
-    api rootProject.ext.dependencies["switchbutton"]
-    api rootProject.ext.dependencies["fragmentation"]
-    api rootProject.ext.dependencies["FlycoDialog_Lib"]
-    api rootProject.ext.dependencies["FlycoTabLayout_Lib"]
-    api rootProject.ext.dependencies["glide-transformations"]
-    api rootProject.ext.dependencies["zxing-android-embedded"]
-    api rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    compile rootProject.ext.dependencies["banner"]
+    compile rootProject.ext.dependencies["flowlayout"]
+    compile rootProject.ext.dependencies["photoview"]
+    compile rootProject.ext.dependencies["switchbutton"]
+    compile rootProject.ext.dependencies["fragmentation"]
+    compile rootProject.ext.dependencies["FlycoDialog_Lib"]
+    compile rootProject.ext.dependencies["FlycoTabLayout_Lib"]
+    compile rootProject.ext.dependencies["glide-transformations"]
+    compile rootProject.ext.dependencies["zxing-android-embedded"]
+    compile rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
     //rx
-    api rootProject.ext.dependencies["rxjava"]
-    api(rootProject.ext.dependencies["rxandroid"]) {
+    compile rootProject.ext.dependencies["rxjava"]
+    compile(rootProject.ext.dependencies["rxandroid"]) {
         exclude module: 'rxjava'
     }
-    api(rootProject.ext.dependencies["rxlifecycle-android"]) {
+    compile(rootProject.ext.dependencies["rxlifecycle-android"]) {
         exclude module: 'rxjava'
     }
-    api(rootProject.ext.dependencies["rxlifecycle-components"]) {
+    compile(rootProject.ext.dependencies["rxlifecycle-components"]) {
         exclude module: 'rxjava'
     }
     //network
-    api rootProject.ext.dependencies["gson"]
-    api(rootProject.ext.dependencies["retrofit"]) {
+    compile rootProject.ext.dependencies["gson"]
+    compile(rootProject.ext.dependencies["retrofit"]) {
         exclude module: 'okhttp'
     }
-    api(rootProject.ext.dependencies["retrofit-converter-gson"]) {
+    compile(rootProject.ext.dependencies["retrofit-converter-gson"]) {
         exclude module: 'gson'
     }
-    api(rootProject.ext.dependencies["retrofit-adapter-rxjava"]) {
+    compile(rootProject.ext.dependencies["retrofit-adapter-rxjava"]) {
         exclude module: 'rxjava'
     }
-    api rootProject.ext.dependencies["glide"]
-    api rootProject.ext.dependencies["okhttp3"]
-    api rootProject.ext.dependencies["okhttp3-logging-interceptor"]
-    api rootProject.ext.dependencies["glide-okhttp3-integration"]
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["okhttp3"]
+    compile rootProject.ext.dependencies["okhttp3-logging-interceptor"]
+    compile rootProject.ext.dependencies["glide-okhttp3-integration"]
     //other
-    api rootProject.ext.dependencies["rxpermissions"]
-    api rootProject.ext.dependencies["Jolyglot-Gson"]
-    api rootProject.ext.dependencies["RxCache"]
+    compile rootProject.ext.dependencies["rxpermissions"]
+    compile rootProject.ext.dependencies["Jolyglot-Gson"]
+    compile rootProject.ext.dependencies["RxCache"]
     //Cookie
-    api rootProject.ext.dependencies["PersistentCookieJar"]
+    compile rootProject.ext.dependencies["PersistentCookieJar"]
     //di
-    api rootProject.ext.dependencies["dagger-android"]
-    api rootProject.ext.dependencies["dagger-android-support"]
-    api rootProject.ext.dependencies["arouter-api"]
+    compile rootProject.ext.dependencies["dagger-android"]
+    compile rootProject.ext.dependencies["dagger-android-support"]
+    compile rootProject.ext.dependencies["arouter-api"]
     //    api rootProject.ext.dependencies["retrofit-converter-jackson"]
     provided rootProject.ext.dependencies["javax.annotation"]
+
     //dagger2的apt注解
+    provided rootProject.ext.dependencies["javax.annotation"]
     kapt rootProject.ext.dependencies["dagger-compiler"]
     kapt rootProject.ext.dependencies["dagger-android-processor"]
+
     //阿里的Arouter的apt注解
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
-    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }

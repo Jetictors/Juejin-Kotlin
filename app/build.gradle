@@ -57,6 +57,7 @@ android {
 
     dexOptions {
         jumboMode true
+        jumboMode true
         preDexLibraries false
     }
     packagingOptions {
@@ -74,23 +75,22 @@ android {
 }
 
 dependencies {
-//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-//        exclude group: 'com.android.support', module: 'support-annotations'
-//    })
-//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-//    testCompile rootProject.ext.dependencies["junit"]
-    provided rootProject.ext.dependencies["javax.annotation"]
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    testCompile rootProject.ext.dependencies["junit"]
+
+
     //dagger2的apt注解
+    provided rootProject.ext.dependencies["javax.annotation"]
     annotationProcessor rootProject.ext.dependencies["dagger-compiler"]
+
     //阿里的Arouter的注解
-//    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
 
-    implementation project(':common')
-
-    if (!isApp.toBoolean()) {
-        implementation project(':home')
-        implementation project(':boil')
-        implementation project(':find')
-        implementation project(':mime')
-    }
+    compile project(':home')
+    compile project(':boil')
+    compile project(':find')
+    compile project(':mime')
 }

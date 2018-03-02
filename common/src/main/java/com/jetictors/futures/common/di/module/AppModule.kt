@@ -19,6 +19,7 @@ import javax.inject.Named
  * 时间 ：2017/3/21 10:52
  * 描述 ：提供一些框架必须的实例的 [Module]
  */
+
 @Module
 class AppModule(private val application: BaseApplication) {
 

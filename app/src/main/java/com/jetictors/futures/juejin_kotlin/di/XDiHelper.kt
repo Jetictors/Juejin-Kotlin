@@ -3,6 +3,8 @@
 //import com.jetictors.futures.common.base.BaseApplication
 //import com.jetictors.futures.common.di.module.ActivityModule
 //import com.jetictors.futures.common.di.module.FragmentModule
+//import com.jetictors.futures.juejin_kotlin.di.component.DaggerXActivityComponent
+//import com.jetictors.futures.juejin_kotlin.di.component.DaggerXFragmentComponent
 //import com.jetictors.futures.juejin_kotlin.di.component.XActivityComponent
 //import com.jetictors.futures.juejin_kotlin.di.component.XFragmentComponent
 //
