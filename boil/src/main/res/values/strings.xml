@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">boil</string>
+
+    <string name="boil_title">沸点</string>
 </resources>

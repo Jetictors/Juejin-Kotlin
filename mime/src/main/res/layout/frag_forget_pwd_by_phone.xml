@@ -25,8 +25,7 @@
         <EditText
             android:id="@+id/et_forget_phone"
             style="@style/CommonEditView"
-            android:hint="@string/tx_phone"
-            android:paddingLeft="@dimen/dp_12"/>
+            android:hint="@string/tx_phone" />
 
         <include layout="@layout/layout_line"/>
 
@@ -41,14 +40,13 @@
                 android:id="@+id/et_img_verify_code"
                 style="@style/CommonEditView"
                 android:hint="@string/hint_img_verify_code"
-                android:paddingLeft="@dimen/dp_12"
                 android:layout_weight="1"/>
 
             <ImageView
                 android:id="@+id/img_verify_code"
                 android:layout_width="@dimen/dp_72"
                 android:layout_height="@dimen/dp_30"
-                android:src="@drawable/ic_launcher"/>
+                android:src="@color/clr_72777b"/>
 
         </LinearLayout>
 
@@ -65,7 +63,6 @@
                 android:id="@+id/et_msg_verify_code"
                 style="@style/CommonEditView"
                 android:hint="@string/hint_message_verify_code"
-                android:paddingLeft="@dimen/dp_12"
                 android:layout_weight="1"/>
 
             <TextView
@@ -80,11 +77,26 @@
 
         <include layout="@layout/layout_line"/>
 
-        <EditText
-            android:id="@+id/et_new_pwd"
-            style="@style/CommonEditView"
-            android:hint="@string/tx_new_pwd"
-            android:paddingLeft="@dimen/dp_12"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_24">
+
+            <EditText
+                android:id="@+id/et_new_pwd"
+                style="@style/CommonEditView"
+                android:hint="@string/tx_new_pwd"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/btn_show_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fragmentation_ic_right"/>
+
+        </LinearLayout>
 
         <include layout="@layout/layout_line"/>
 
@@ -93,7 +105,7 @@
     <include layout="@layout/layout_line"/>
 
     <TextView
-        android:id="@+id/btn_commit_email"
+        android:id="@+id/btn_commit_phone"
         style="@style/CommonButton"
         android:text="@string/btn_confirm" />
 

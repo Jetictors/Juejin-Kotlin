@@ -2,7 +2,10 @@ package com.jetictors.futures.find.find.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.jetictors.futures.common.base.BaseFragment
+import com.jetictors.futures.common.fmarework.OnBackToFirstListener
 import com.jetictors.futures.find.R
 
 /**
@@ -20,6 +23,8 @@ class FindFragment : BaseFragment() {
         }
     }
 
+    internal lateinit var mListener : OnBackToFirstListener
+
     override fun initInject(savedInstanceState: Bundle?) {
     }
 
@@ -28,5 +33,26 @@ class FindFragment : BaseFragment() {
     }
 
     override fun initEventAndData(view: View?) {
+        val baseFragment : BaseFragment = parentFragment as BaseFragment
+        if (baseFragment is OnBackToFirstListener){
+            mListener = baseFragment
+        }
+
+        initTitle()
+    }
+
+    private fun initTitle() {
+        activity.findViewById<LinearLayout>(R.id.ll_back).visibility = View.GONE
+        activity.findViewById<TextView>(R.id.tv_title).text = getString(R.string.app_name)
+    }
+
+    override fun onBackPressedSupport(): Boolean {
+        if(childFragmentManager.backStackEntryCount > 1){
+            pop()
+        }else{
+            mListener.backToFirstFragment()
+        }
+
+        return true
     }
 }

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.jetictors.futures.boil.boil.ui.BoilFragment
 import com.jetictors.futures.common.base.BaseFragment
+import com.jetictors.futures.common.fmarework.OnBackToFirstListener
 import com.jetictors.futures.common.widgets.bottombar.BottomBar
 import com.jetictors.futures.common.widgets.bottombar.BottomBarTab
 import com.jetictors.futures.find.find.ui.FindFragment
@@ -19,7 +20,7 @@ import me.yokeyword.fragmentation.SupportFragment
  * time    :  2018/2/1 9:55
  * version : v1.0.1
  */
-class MainFragment : BaseFragment() {
+class MainFragment : BaseFragment(), OnBackToFirstListener {
 
     /*
         底部栏item的当前下标
@@ -38,6 +39,8 @@ class MainFragment : BaseFragment() {
             return mainFragment
         }
     }
+
+
 
     private val mTitles: Array<String> by lazy {
         arrayOf(
@@ -113,15 +116,8 @@ class MainFragment : BaseFragment() {
         }
     }
 
-    override fun onBackPressedSupport(): Boolean {
-
-        // 在已登录的情况下，设置成首页，反之，退出程序
-//        if (true) {
-//            bottomBar.setCurrentItem(0)
-//        } else {
-//
-//        }
-        return true
+    override fun backToFirstFragment() {
+        bottomBar.setCurrentItem(0)
     }
 }
 

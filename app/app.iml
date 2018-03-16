@@ -148,6 +148,7 @@
     <orderEntry type="library" scope="TEST" name="com.squareup:javawriter:2.1.1@jar" level="project" />
     <orderEntry type="library" name="com.github.CymChad:BaseRecyclerViewAdapterHelper-2.9.27" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
+    <orderEntry type="library" name="com.scwang.smartrefresh:SmartRefreshLayout-1.0.4-7" level="project" />
     <orderEntry type="library" name="com.flyco.tablayout:FlycoTabLayout_Lib-2.1.2" level="project" />
     <orderEntry type="library" name="com.android.support:appcompat-v7-26.1.0" level="project" />
     <orderEntry type="library" name="com.android.support:support-annotations:26.1.0@jar" level="project" />

@@ -47,7 +47,8 @@
                     android:id="@+id/et_login_pwd"
                     style="@style/CommonEditView"
                     android:hint="@string/hint_pwd"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:inputType="textPassword"/>
 
                 <ImageView
                     android:id="@+id/btn_show_pwd"

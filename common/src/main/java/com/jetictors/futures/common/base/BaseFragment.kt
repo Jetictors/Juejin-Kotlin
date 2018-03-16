@@ -8,6 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
+import com.jetictors.futures.common.R
 
 import com.jetictors.futures.common.fmarework.IDaggerListener
 import com.trello.rxlifecycle2.LifecycleProvider
@@ -35,6 +40,17 @@ abstract class BaseFragment : SupportFragment(), LifecycleProvider<FragmentEvent
     //_mActivity在SupportFragment中已经在onAttach中绑定了activity可以直接使用
     protected var mContext: Context? = null
 
+    // toolbar相关
+    private val mToolbarRightImgListener : ((rightImgId : Int) -> Unit)? = null
+    private val mToolbarRightTextListener : ((rightTextId : Int) -> Unit)? = null
+    private val mToolbarBackListener : ((llBackId : Int) -> Unit)? = null
+    protected lateinit var mToolbarBackIcon : ImageView
+    protected lateinit var mToolbarBackText : TextView
+    protected lateinit var mToolbarTitle : TextView
+    protected lateinit var mToolbarRightIcon : ImageView
+    protected lateinit var mToolbarRightText : TextView
+    protected lateinit var mToolbarLlBack : LinearLayout
+
     /**
      * 判断软键盘是否弹出
      */
@@ -53,7 +69,6 @@ abstract class BaseFragment : SupportFragment(), LifecycleProvider<FragmentEvent
                 return false
             }
         }
-
 
     abstract fun getLayoutId(): Int
 
@@ -75,6 +90,32 @@ abstract class BaseFragment : SupportFragment(), LifecycleProvider<FragmentEvent
         }
         initInject(savedInstanceState)
         return mView
+    }
+
+    protected fun setToolbar(){
+
+    }
+
+    protected fun isShowBack(showBackIcon : Boolean, showBackText : Boolean){
+        val mBackIcon : ImageView? = mView?.findViewById(R.id.iv_back)
+        val mBackText : TextView? = mView?.findViewById(R.id.tv_back)
+        val mLlBack : LinearLayout? = mView?.findViewById(R.id.ll_back)
+
+        if (showBackIcon && showBackText){
+            mLlBack?.visibility = View.GONE
+        }else if(showBackIcon){
+            mBackIcon?.visibility = View.VISIBLE
+        }else{
+            mBackText?.visibility = View.VISIBLE
+        }
+    }
+
+    protected fun isShowTitle(showTitle : Boolean){
+
+    }
+
+    protected fun isShowRightText(showRight : Boolean){
+
     }
 
     /**
@@ -126,7 +167,6 @@ abstract class BaseFragment : SupportFragment(), LifecycleProvider<FragmentEvent
                 imm.hideSoftInputFromWindow(activity.currentFocus!!.windowToken,
                         InputMethodManager.HIDE_NOT_ALWAYS)
             }
-
         }
     }
 
@@ -217,4 +257,15 @@ abstract class BaseFragment : SupportFragment(), LifecycleProvider<FragmentEvent
         lifecycleSubject.onNext(FragmentEvent.DETACH)
         super.onDetach()
     }
+
+    /**
+     * 拓展toast函数
+     */
+    fun Context.shortToast(msg : CharSequence) = Toast.makeText(mContext,msg,Toast.LENGTH_SHORT).show()
+
+    fun Context.shortToast(msg : String) = Toast.makeText(mContext,msg,Toast.LENGTH_SHORT).show()
+
+    fun Context.longToast(msg : CharSequence) = Toast.makeText(mContext,msg,Toast.LENGTH_LONG).show()
+
+    fun Context.longToast(msg : String) = Toast.makeText(mContext,msg,Toast.LENGTH_LONG).show()
 }

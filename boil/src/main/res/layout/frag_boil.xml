@@ -7,11 +7,6 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="@dimen/sp_20"
-        android:textColor="@color/clr_3780f7"/>
+    <include layout="@layout/layout_refresh_rv"/>
 
 </LinearLayout>

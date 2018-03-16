@@ -8,381 +8,349 @@
 
     <include layout="@layout/layout_toolbar" />
 
-    <include layout="@layout/layout_line"
-        android:layout_marginTop="@dimen/dp_12"
-        android:layout_height="@dimen/dp_0.5"
-        android:layout_width="match_parent"/>
-
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingEnd="@dimen/dp_12"
-        android:paddingStart="@dimen/dp_12"
-        android:background="@color/clr_white">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_line"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_width="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_12"
+                android:background="@color/clr_white">
+
+                <LinearLayout
+                    android:id="@+id/ll_user_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_phone"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_user_phone"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/clr_72777b"
+                        android:textSize="@dimen/sp_12" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:src="@drawable/fragmentation_ic_right" />
+
+                </LinearLayout>
+
+                <include layout="@layout/layout_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_email"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_user_email"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/clr_72777b"
+                        android:textSize="@dimen/sp_12" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:src="@drawable/fragmentation_ic_right" />
+
+                </LinearLayout>
+
+                <include layout="@layout/layout_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_pwd"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:src="@drawable/fragmentation_ic_right" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line" />
+
+            <include layout="@layout/layout_line"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_width="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_12"
+                android:background="@color/clr_white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_bind_weibo"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_weibo_nickname"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/clr_72777b"
+                        android:textSize="@dimen/sp_12" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/switch_button_weibo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <include layout="@layout/layout_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_bind_wechat"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_wechat_nickname"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/clr_72777b"
+                        android:textSize="@dimen/sp_12" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/switch_button_wechat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <include layout="@layout/layout_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_bind_github"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_github_nickname"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/clr_72777b"
+                        android:textSize="@dimen/sp_12" />
+
+                    <com.kyleduo.switchbutton.SwitchButton
+                        android:id="@+id/switch_button_github"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line" />
+
+            <include layout="@layout/layout_line"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_width="match_parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/dp_12"
+                android:paddingStart="@dimen/dp_12"
+                android:background="@color/clr_white">
+
+                <LinearLayout
+                    android:id="@+id/ll_clear_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_clear_cache"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14" />
+
+                    <TextView
+                        android:id="@+id/tv_cache"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/app_name"
+                        android:textColor="@color/clr_72777b"
+                        android:textSize="@dimen/sp_12" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:src="@drawable/fragmentation_ic_right" />
+
+                </LinearLayout>
+
+                <include layout="@layout/layout_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_msg_notify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_8">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/set_tx_msg_notify"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:src="@drawable/fragmentation_ic_right" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_line" />
+
+            <include layout="@layout/layout_line"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_height="@dimen/dp_0.5"
+                android:layout_width="match_parent"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/btn_exit"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
+                android:background="@color/clr_white"
+                android:textColor="@color/clr_fa6c51"
+                android:textSize="@dimen/sp_14"
+                android:text="@string/set_tx_exit_login"
+                android:gravity="center"
+                android:paddingTop="@dimen/dp_8"
+                android:paddingBottom="@dimen/dp_8" />
+
+            <include layout="@layout/layout_line" />
 
             <TextView
-                android:layout_width="@dimen/dp_0"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
+                android:layout_marginTop="@dimen/dp_12"
+                android:text="@string/hint_logo"
                 android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
+                android:textSize="@dimen/sp_10"
+                android:gravity="center"/>
 
         </LinearLayout>
 
-        <include layout="@layout/layout_line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-        <include layout="@layout/layout_line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <include layout="@layout/layout_line" />
-
-    <include layout="@layout/layout_line"
-        android:layout_marginTop="@dimen/dp_12"
-        android:layout_height="@dimen/dp_0.5"
-        android:layout_width="match_parent"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingEnd="@dimen/dp_12"
-        android:paddingStart="@dimen/dp_12"
-        android:background="@color/clr_white">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-        <include layout="@layout/layout_line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-        <include layout="@layout/layout_line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <include layout="@layout/layout_line" />
-
-    <include layout="@layout/layout_line"
-        android:layout_marginTop="@dimen/dp_12"
-        android:layout_height="@dimen/dp_0.5"
-        android:layout_width="match_parent"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingEnd="@dimen/dp_12"
-        android:paddingStart="@dimen/dp_12"
-        android:background="@color/clr_white">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-        <include layout="@layout/layout_line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-        <include layout="@layout/layout_line" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_8">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_14" />
-
-            <TextView
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/app_name"
-                android:textColor="@color/clr_72777b"
-                android:textSize="@dimen/sp_12" />
-
-            <ImageView
-                android:layout_width="@dimen/dp_24"
-                android:layout_height="@dimen/dp_24"
-                android:layout_marginLeft="@dimen/dp_12"
-                android:src="@drawable/ic_launcher" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <include layout="@layout/layout_line" />
-
-    <include layout="@layout/layout_line"
-        android:layout_marginTop="@dimen/dp_12"
-        android:layout_height="@dimen/dp_0.5"
-        android:layout_width="match_parent"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/clr_white"
-        android:textColor="@color/clr_fa6c51"
-        android:textSize="@dimen/sp_14"
-        android:text="@string/app_name"
-        android:gravity="center"
-        android:paddingTop="@dimen/dp_8"
-        android:paddingBottom="@dimen/dp_8" />
-
-    <include layout="@layout/layout_line" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_12"
-        android:text="@string/hint_logo"
-        android:textColor="@color/clr_72777b"
-        android:textSize="@dimen/sp_10" />
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

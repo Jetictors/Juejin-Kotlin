@@ -1,58 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_common_bg">
+    android:orientation="vertical">
 
-    <include layout="@layout/layout_toolbar"/>
+    <include layout="@layout/layout_toolbar" />
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/clr_white"
-        android:orientation="horizontal"
-        android:padding="@dimen/dp_12"
-        android:gravity="center_vertical"
-        android:layout_marginBottom="@dimen/dp_12">
-
-        <com.jetictors.futures.common.widgets.CircleImageView
-            android:id="@+id/iv_header"
-            android:layout_width="@dimen/dp_56"
-            android:layout_height="@dimen/dp_56"
-            android:src="@drawable/ic_launcher"/>
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:paddingStart="@dimen/dp_12">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_common_bg"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tx_nickname"
+            <LinearLayout
+                android:id="@+id/ll_mime_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/clr_black"
-                android:textSize="@dimen/sp_16" />
+                android:background="@color/clr_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_12">
+
+                <com.jetictors.futures.common.widgets.CircleImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="@dimen/dp_56"
+                    android:layout_height="@dimen/dp_56"
+                    android:src="@color/color_common_bg" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dp_12">
+
+                    <TextView
+                        android:id="@+id/tx_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/clr_black"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/tx_job"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_13" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fragmentation_ic_right" />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/tx_job"
+                android:id="@+id/btn_tab_msg"
+                style="@style/CommonTabTextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/sp_13" />
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/clr_white"
+                android:text="@string/tx_tab_message" />
+
+            <LinearLayout
+                android:id="@+id/ll_tab_like"
+                style="@style/CommonTabLinearLayout">
+
+                <TextView
+                    style="@style/CommonTabTextView"
+                    android:text="@string/tx_tab_like"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_0"/>
+
+                <TextView
+                    android:id="@+id/tx_value_like_count"
+                    style="@style/CommonValueTextView"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab_collect"
+                style="@style/CommonTabLinearLayout">
+
+                <TextView
+                    style="@style/CommonTabTextView"
+                    android:text="@string/tx_tab_collect"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_0"/>
+
+                <TextView
+                    android:id="@+id/tx_value_collect_count"
+                    style="@style/CommonValueTextView"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab_buy"
+                style="@style/CommonTabLinearLayout">
+
+                <TextView
+                    style="@style/CommonTabTextView"
+                    android:text="@string/tx_tab_buy"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_0"/>
+
+                <TextView
+                    android:id="@+id/tx_value_buy_count"
+                    style="@style/CommonValueTextView"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab_boil"
+                style="@style/CommonTabLinearLayout">
+
+                <TextView
+                    style="@style/CommonTabTextView"
+                    android:text="@string/tx_tab_boil"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_0"/>
+
+                <TextView
+                    android:id="@+id/tx_value_boil_count"
+                    style="@style/CommonValueTextView"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab_read"
+                style="@style/CommonTabLinearLayout">
+
+                <TextView
+                    style="@style/CommonTabTextView"
+                    android:text="@string/tx_tab_read_article"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_0"/>
+
+                <TextView
+                    android:id="@+id/tx_value_read_count"
+                    style="@style/CommonValueTextView"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tab_manager"
+                style="@style/CommonTabLinearLayout">
+
+                <TextView
+                    style="@style/CommonTabTextView"
+                    android:text="@string/tx_tab_manager"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_0"/>
+
+                <TextView
+                    android:id="@+id/tx_value_manager_count"
+                    style="@style/CommonValueTextView"
+                    android:text="0" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_tab_feedback"
+                style="@style/CommonTabTextView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_12"
+                android:background="@color/clr_white"
+                android:text="@string/tx_tab_feedback" />
+
+            <TextView
+                android:id="@+id/btn_tab_set"
+                style="@style/CommonTabTextView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/clr_white"
+                android:text="@string/tx_tab_set"
+                android:layout_marginBottom="@dimen/dp_12"/>
 
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"/>
-
-    </LinearLayout>
-
-    <include layout="@layout/layout_rv"/>
+    </android.support.v4.widget.NestedScrollView>
 
 </LinearLayout>

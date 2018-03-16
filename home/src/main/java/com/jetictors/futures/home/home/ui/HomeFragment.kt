@@ -2,7 +2,9 @@ package com.jetictors.futures.home.home.ui
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.jetictors.futures.common.base.BaseFragment
+import com.jetictors.futures.common.utils.AppManager
 import com.jetictors.futures.home.R
 
 /**
@@ -14,11 +16,10 @@ import com.jetictors.futures.home.R
 class HomeFragment : BaseFragment(){
 
     companion object {
-        fun newInstance() : HomeFragment{
-            val homeFragment = HomeFragment()
-            return homeFragment
-        }
+        fun newInstance() = HomeFragment()
     }
+
+    private var currentTime : Long = 0L
 
     override fun getLayoutId(): Int {
         return R.layout.frag_home
@@ -30,5 +31,23 @@ class HomeFragment : BaseFragment(){
 
     override fun initInject(savedInstanceState: Bundle?) {
 
+    }
+
+    override fun onBackPressedSupport(): Boolean {
+
+        if (childFragmentManager.backStackEntryCount > 1){
+            popChild()
+        }else{
+
+            if (System.currentTimeMillis().minus(currentTime) > 2000){
+                currentTime = System.currentTimeMillis()
+                Toast.makeText(_mActivity,"再次点击退出应用",Toast.LENGTH_SHORT).show()
+            }else{
+                android.os.Process.killProcess(android.os.Process.myPid())
+                System.exit(0)
+            }
+        }
+
+        return true
     }
 }

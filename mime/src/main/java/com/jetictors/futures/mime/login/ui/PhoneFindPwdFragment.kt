@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.jetictors.futures.common.base.BaseFragment
 import com.jetictors.futures.mime.R
+import kotlinx.android.synthetic.main.frag_forget_pwd_by_phone.*
 
 /**
  * 描述    : 手机找回密码页面
@@ -25,5 +26,33 @@ class PhoneFindPwdFragment : BaseFragment(){
     }
 
     override fun initEventAndData(view: View?) {
+        initData()
+        initListener()
     }
+
+    private fun initData() {
+
+    }
+
+    private fun initListener() {
+        // 获取验证码
+        btn_msg_verify_code.setOnClickListener {
+
+        }
+
+        // 确定
+        btn_commit_phone.setOnClickListener {
+            if (check()){
+
+            }
+        }
+    }
+
+    private fun check() : Boolean{
+
+
+
+        return true
+    }
+
 }

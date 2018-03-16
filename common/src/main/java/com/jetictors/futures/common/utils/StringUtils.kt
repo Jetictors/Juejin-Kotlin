@@ -1,5 +1,7 @@
 package com.jetictors.futures.yake.utils
 
+import java.util.regex.Pattern
+
 /**
  * 描述    : 为String类型添加一些扩展方法
  * author  : Jetictors
@@ -10,41 +12,42 @@ package com.jetictors.futures.yake.utils
 
 /**
  * 验证当前参数值是否是一个正确的手机号码
- * @param phoneNum 手机号码
  * @return boolean
  */
-fun String.isPhoneNum(phoneNum : String) = false
+fun String.isPhoneNum() : Boolean{
+    val REGEX_PHONE = "[1][34578]\\\\d{9}"
+    return Pattern.matches(REGEX_PHONE,this)
+}
 
 /**
  * 验证密码长度
- * @param pwd 密码
  * @param length 最小的密码长度
  * @return boolean
  */
-fun String.isPwd(pwd : String, length : Int) = pwd.length >= length
+fun String.isPwd(length : Int) = this.length >= length
 
 /**
  * 验证密码长度
- * @param pwd 密码
  * @param minLength 最小密码长度
  * @param maxLength 最大密码长度
  * @return boolean
  */
-fun String.isPwd(pwd: String, minLength : Int, maxLength : Int) = pwd.length in minLength..(maxLength - 1)
+fun String.isPwd(minLength : Int, maxLength : Int) = this.length in minLength..(maxLength - 1)
 
 /**
  * 验证当前参数值是否是一个正确的邮箱
- * @param email 邮箱
  * @return boolean
  */
-fun String.isEmail(email : String) = true
+fun String.isEmail() : Boolean{
+    val REGEX_EMAIL = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$"
+    return Pattern.matches(REGEX_EMAIL,this)
+}
 
 /**
  * 验证当前参数值是否全部由数字组成
- * @param str 源字符串
  * @return boolean
  */
-fun String.isPureNum(str : String) : Boolean = false
+fun String.isPureNum() : Boolean = false
 
 
 

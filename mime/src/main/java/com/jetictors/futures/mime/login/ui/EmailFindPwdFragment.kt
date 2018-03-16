@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.jetictors.futures.common.base.BaseFragment
 import com.jetictors.futures.mime.R
+import kotlinx.android.synthetic.main.frag_forget_pwd_by_email.*
 
 /**
  * 描述    : 邮箱找回密码页面
@@ -26,10 +27,23 @@ class EmailFindPwdFragment : BaseFragment(){
     }
 
     override fun initEventAndData(view: View?) {
+        initData()
         initListener()
     }
 
-    private fun initListener() {
+    private fun initData() {
 
+    }
+
+    private fun initListener() {
+        // 发送邮件
+        btn_commit_email.setOnClickListener {
+
+        }
+
+        // 回到登陆页
+        btn_back_login_page.setOnClickListener {
+
+        }
     }
 }

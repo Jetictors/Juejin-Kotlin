@@ -52,7 +52,7 @@ ext {
             VSwitchbutton          : "1.4.6",
             VZxingAndroidEmbedded  : "3.5.0",
             VFlowlayout            : "1.1.2",
-            VSmartRefreshLayout    : "1.0.3",
+            VSmartRefreshLayout    : "1.0.4-7",
 
             // logger
             VLog                   : "1.6.0"

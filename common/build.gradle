@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-//apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -94,6 +94,7 @@ dependencies {
     compile rootProject.ext.dependencies["glide-transformations"]
     compile rootProject.ext.dependencies["zxing-android-embedded"]
     compile rootProject.ext.dependencies["BaseRecyclerViewAdapterHelper"]
+    compile rootProject.ext.dependencies["smartRefreshLayout"]
     //rx
     compile rootProject.ext.dependencies["rxjava"]
     compile(rootProject.ext.dependencies["rxandroid"]) {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/tv_bind_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/clr_black"
+        android:textSize="@dimen/sp_20" />
+
+    <include layout="@layout/layout_line" />
+
+    <EditText
+        android:id="@+id/et_new_email"
+        style="@style/CommonEditView"
+        android:hint="@string/hint_new_email"
+        android:paddingStart="@dimen/dp_24" />
+
+    <include layout="@layout/layout_line" />
+
+    <TextView
+        android:id="@+id/btn_save_email"
+        style="@style/CommonButton"
+        android:text="@string/btn_bind_email" />
+
+</LinearLayout>

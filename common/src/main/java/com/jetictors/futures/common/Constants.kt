@@ -16,9 +16,7 @@ object Constants {
     }
 
     object UrlManager{
-        const val BASE_URL = ""
+        const val BASE_URL = "xxxxxx"
     }
-
-
 
 }

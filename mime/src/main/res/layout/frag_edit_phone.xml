@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_common_bg">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_bind_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/clr_black"
+        android:text=""
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"/>
+
+    <include layout="@layout/layout_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_12"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_new_phone"
+            style="@style/CommonEditView"
+            android:hint="@string/tx_phone"
+            android:paddingStart="@dimen/dp_12"/>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/dp_12"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_img_verify_code"
+                style="@style/CommonEditView"
+                android:hint="@string/hint_img_verify_code"
+                android:paddingLeft="@dimen/dp_12"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/img_verify_code"
+                android:layout_width="@dimen/dp_72"
+                android:layout_height="@dimen/dp_30"
+                android:src="@color/clr_72777b"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/dp_12"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/et_msg_verify_code"
+                style="@style/CommonEditView"
+                android:hint="@string/hint_message_verify_code"
+                android:paddingLeft="@dimen/dp_12"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/btn_msg_verify_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/clr_3780f7"
+                android:text="@string/btn_get_verify_code"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_line"/>
+
+    <TextView
+        android:id="@+id/btn_save_phone"
+        style="@style/CommonButton"
+        android:text="@string/tx_save" />
+
+</LinearLayout>

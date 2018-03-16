@@ -8,6 +8,140 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <include layout="@layout/layout_rv"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_12"
+        android:background="@color/clr_white">
+
+        <LinearLayout
+            android:id="@+id/ll_edit_tab_header"
+            style="@style/CommonTabLinearLayout"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0">
+
+            <TextView
+                style="@style/CommonTabTextView"
+                android:text="@string/tx_header"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_0"
+                android:drawableStart="@null"/>
+
+            <com.jetictors.futures.common.widgets.CircleImageView
+                android:id="@+id/iv_edit_header"
+                android:layout_width="@dimen/dp_56"
+                android:layout_height="@dimen/dp_56"
+                android:src="@color/color_common_bg"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_edit_tab_nickname"
+            style="@style/CommonTabLinearLayout"
+            android:paddingStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0">
+
+            <TextView
+                style="@style/CommonTabTextView"
+                android:text="@string/tx_nickname"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_0"
+                android:drawableStart="@null"/>
+
+            <TextView
+                android:id="@+id/tv_edit_nickname"
+                style="@style/CommonValueTextView" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_edit_tab_job"
+            style="@style/CommonTabLinearLayout"
+            android:paddingStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0">
+
+            <TextView
+                style="@style/CommonTabTextView"
+                android:text="@string/tx_job"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_0"
+                android:drawableStart="@null"/>
+
+            <TextView
+                android:id="@+id/tv_edit_job"
+                style="@style/CommonValueTextView" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_edit_tab_firm"
+            style="@style/CommonTabLinearLayout"
+            android:paddingStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0">
+
+            <TextView
+                style="@style/CommonTabTextView"
+                android:text="@string/tx_firm"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_0"
+                android:drawableStart="@null"/>
+
+            <TextView
+                android:id="@+id/tv_edit_firm"
+                style="@style/CommonValueTextView" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_edit_tab_info"
+            style="@style/CommonTabLinearLayout"
+            android:paddingStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0">
+
+            <TextView
+                style="@style/CommonTabTextView"
+                android:text="@string/tx_info"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_0"
+                android:drawableStart="@null"/>
+
+            <TextView
+                android:id="@+id/tv_edit_info"
+                style="@style/CommonValueTextView" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_edit_tab_blog_address"
+            style="@style/CommonTabLinearLayout"
+            android:paddingStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0">
+
+            <TextView
+                style="@style/CommonTabTextView"
+                android:text="@string/tx_blog_address"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_0"
+                android:drawableStart="@null"/>
+
+            <TextView
+                android:id="@+id/tv_edit_blog_address"
+                style="@style/CommonValueTextView" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

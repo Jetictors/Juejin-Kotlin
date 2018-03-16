@@ -10,10 +10,13 @@
         android:layout_height="@dimen/dp_0"
         android:layout_weight="1"/>
 
+    <include layout="@layout/layout_line"/>
+
     <com.jetictors.futures.common.widgets.bottombar.BottomBar
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_56"
-        android:layout_gravity="bottom"/>
+        android:layout_gravity="bottom"
+        android:background="@color/color_common_bg"/>
 
 </LinearLayout>

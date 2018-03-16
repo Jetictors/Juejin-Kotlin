@@ -1,6 +1,9 @@
 package com.jetictors.futures.mime.login.ui
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.app.FragmentStatePagerAdapter
 import android.view.View
 import com.jetictors.futures.common.base.BaseFragment
 import com.jetictors.futures.mime.R
@@ -18,8 +21,8 @@ class ForgetPwdFragment : BaseFragment(){
 
     companion object {
 
-        private const val INDEX_FIRST = 1
-        private const val INDEX_SECOND = 2
+        private const val INDEX_FIRST = 0
+        private const val INDEX_SECOND = 1
 
         fun newInstance() = ForgetPwdFragment()
     }
@@ -34,8 +37,6 @@ class ForgetPwdFragment : BaseFragment(){
         if (savedInstanceState == null){
             mFragments[INDEX_FIRST] = PhoneFindPwdFragment.newInstance()
             mFragments[INDEX_SECOND] = EmailFindPwdFragment.newInstance()
-
-            loadMultipleRootFragment(R.id.forget_container, INDEX_FIRST,*mFragments)
         }else{
             mFragments[INDEX_FIRST] = findFragment(PhoneFindPwdFragment::class.java)
             mFragments[INDEX_SECOND] = findFragment(EmailFindPwdFragment::class.java)
@@ -52,7 +53,16 @@ class ForgetPwdFragment : BaseFragment(){
     }
 
     private fun initView() {
+        this.forget_view_pager.currentItem = 0
+        this.forget_view_pager.adapter = object : FragmentStatePagerAdapter(childFragmentManager){
+            override fun getItem(position: Int) = mFragments[position]
 
+            override fun getCount() = mFragments.size
+
+            override fun getPageTitle(position: Int) = mTabTexts[position]
+        }
+
+        this.forget_tab_layout.setupWithViewPager(this.forget_view_pager)
     }
 
     private fun initTitle() {

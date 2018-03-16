@@ -1,11 +1,13 @@
 package com.jetictors.futures.mime.login.ui
 
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
-import android.widget.RadioGroup
 import com.jetictors.futures.common.base.BaseActivity
 import com.jetictors.futures.common.base.BaseFragment
 import com.jetictors.futures.mime.R
+import com.jetictors.futures.yake.utils.isEmail
+import com.jetictors.futures.yake.utils.isPhoneNum
 import kotlinx.android.synthetic.main.frag_login.*
 
 /**
@@ -17,7 +19,7 @@ import kotlinx.android.synthetic.main.frag_login.*
 class LoginFragment : BaseFragment(){
 
     companion object {
-        fun newInstanc() = LoginFragment()
+        fun newInstance() = LoginFragment()
     }
 
     /**
@@ -46,22 +48,33 @@ class LoginFragment : BaseFragment(){
 
         // 登陆
         this.btn_login.setOnClickListener {
-            checkLogin()
+            if (checkLogin()){
+
+            }
         }
 
         // 忘记密码
         this.btn_forget_pwd.setOnClickListener {
-            // 跳转到重置密码页面
-
+            (_mActivity as BaseActivity).start(ForgetPwdFragment.newInstance())
         }
 
         // 注册账号
         this.btn_register.setOnClickListener {
-            // 跳转到注册页面
+            (_mActivity as BaseActivity).start(RegisterFragment.newInstance())
         }
 
         // 密码是否可见
-
+        this.btn_show_pwd.setOnClickListener {
+            if(pwdIsShow){
+                pwdIsShow = false
+                this.btn_show_pwd.setImageResource(R.drawable.abc_ic_star_black_16dp)
+                this.et_login_pwd.inputType = InputType.TYPE_TEXT_VARIATION_PASSWORD
+            }else{
+                pwdIsShow = true
+                this.btn_show_pwd.setImageResource(R.drawable.abc_ic_star_black_16dp)
+                this.et_login_pwd.inputType = InputType.TYPE_TEXT_VARIATION_NORMAL
+            }
+        }
 
         // 微博登陆
         this.btn_login_weibo.setOnClickListener{
@@ -91,14 +104,23 @@ class LoginFragment : BaseFragment(){
     /**
      * 检测是否满足登陆条件
      */
-    private fun checkLogin() {
+    private fun checkLogin() : Boolean{
         if (this.et_login_user.text.toString().isEmpty()){
-            return
+            activity.shortToast(getString(R.string.hint_user_null))
+            return false
+        }
+
+        if (!this.et_login_user.text.toString().isPhoneNum() || !this.et_login_user.text.toString().isEmail()){
+            activity.shortToast(getString(R.string.hint_user_error))
+            return false
         }
 
         if (this.et_login_pwd.text.toString().isEmpty()){
-            return
+            activity.shortToast(getString(R.string.hint_pwd_null))
+            return false
         }
+
+        return true
     }
 
 }

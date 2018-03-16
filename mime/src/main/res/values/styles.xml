@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="CommonTabTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/clr_black</item>
+        <item name="android:drawablePadding">@dimen/dp_12</item>
+        <item name="android:drawableStart">@drawable/fragmentation_ic_right</item>
+        <item name="android:paddingLeft">@dimen/dp_18</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingRight">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_12</item>
+    </style>
+
+    <style name="CommonValueTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/clr_72777b</item>
+    </style>
+
+    <style name="CommonTabLinearLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/dp_18</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingRight">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_12</item>
+        <item name="android:layout_marginTop">@dimen/dp_1</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/clr_white</item>
+    </style>
+
+    <style name="ForgetPwdTabLayoutStyle">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
 </resources>

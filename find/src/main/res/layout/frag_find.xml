@@ -5,13 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/layout_toolbar"/>
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_6"
+        android:paddingBottom="@dimen/dp_6">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="@dimen/sp_20"
-        android:textColor="@color/clr_3780f7"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_confirm"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/layout_refresh_rv"/>
 
 </LinearLayout>

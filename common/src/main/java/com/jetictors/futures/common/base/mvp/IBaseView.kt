@@ -14,9 +14,4 @@ interface IBaseView{
     fun <T> bindLifecycle(): LifecycleTransformer<T>
 
     fun getAContext(): Context
-
-    fun showDialog()
-
-    fun dissmissDialog()
-
 }
