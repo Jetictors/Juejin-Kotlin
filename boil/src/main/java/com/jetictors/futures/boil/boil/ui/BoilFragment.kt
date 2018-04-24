@@ -5,10 +5,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.jetictors.futures.boil.R
-import com.jetictors.futures.boil.boil.presenter.BoilPresenter
-import com.jetictors.futures.boil.boil.presenter.contract.IBoilContract
 import com.jetictors.futures.common.base.BaseFragment
-import com.jetictors.futures.common.base.XDaggerFragment
 import com.jetictors.futures.common.fmarework.OnBackToFirstListener
 
 /**
@@ -20,7 +17,7 @@ import com.jetictors.futures.common.fmarework.OnBackToFirstListener
 class BoilFragment : BaseFragment() {
 
     companion object {
-        fun newInstance() : BoilFragment{
+        fun newInstance(): BoilFragment {
             val boilFragment = BoilFragment()
             return boilFragment
         }

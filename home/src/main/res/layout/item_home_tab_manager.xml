@@ -16,7 +16,7 @@
         android:textColor="@color/clr_black"
         android:textSize="@dimen/sp_14"
         android:drawablePadding="@dimen/dp_16"
-        android:drawableLeft="@drawable/fragmentation_ic_stack"
+        android:drawableLeft="@android:drawable/star_off"
         android:gravity="center_vertical"/>
 
     <com.kyleduo.switchbutton.SwitchButton

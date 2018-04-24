@@ -7,17 +7,6 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Test"
-        android:gravity="center"
-        android:textSize="@dimen/sp_20"
-        android:textColor="@color/clr_black"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/msg_rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <include layout="@layout/layout_refresh_rv"/>
 
 </LinearLayout>

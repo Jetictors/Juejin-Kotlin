@@ -6,11 +6,13 @@ import android.support.annotation.CallSuper
 import android.support.annotation.CheckResult
 import android.support.annotation.Nullable
 import com.jetictors.futures.common.fmarework.IDaggerListener
+import com.jetictors.futures.common.utils.logger.KLog
 import com.trello.rxlifecycle2.LifecycleProvider
 import com.trello.rxlifecycle2.LifecycleTransformer
 import com.trello.rxlifecycle2.RxLifecycle
 import com.trello.rxlifecycle2.android.ActivityEvent
 import com.trello.rxlifecycle2.android.RxLifecycleAndroid
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import me.yokeyword.fragmentation.SupportActivity
@@ -26,27 +28,26 @@ abstract class BaseActivity : SupportActivity(), LifecycleProvider<ActivityEvent
     private val lifecycleSubject = BehaviorSubject.create<ActivityEvent>()
 
     override fun onCreate(@Nullable savedInstanceState: Bundle?) {
-
         initInject(savedInstanceState)
-
         super.onCreate(savedInstanceState)
-
         lifecycleSubject.onNext(ActivityEvent.CREATE)
-
         if (getLayout() > 0) {
             setContentView(getLayout())
         }
-
         initEventAndData(savedInstanceState)
     }
 
     protected abstract fun initEventAndData(savedInstanceState: Bundle?)
 
-    protected abstract fun getLayout() : Int
+    protected abstract fun getLayout(): Int
 
     override fun onDestroy() {
         lifecycleSubject.onNext(ActivityEvent.DESTROY)
         super.onDestroy()
+
+        kotlin.run {
+            val arr = arrayOf(1,2,3)
+        }
     }
 
     /**
@@ -100,5 +101,6 @@ abstract class BaseActivity : SupportActivity(), LifecycleProvider<ActivityEvent
         lifecycleSubject.onNext(ActivityEvent.STOP)
         super.onStop()
     }
+
 
 }

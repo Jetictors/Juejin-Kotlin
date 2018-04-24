@@ -3,9 +3,10 @@ package com.jetictors.futures.home.home.ui
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.jetictors.futures.common.base.BaseActivity
 import com.jetictors.futures.common.base.BaseFragment
-import com.jetictors.futures.common.utils.AppManager
 import com.jetictors.futures.home.R
+import kotlinx.android.synthetic.main.frag_home.*
 
 /**
  * @描述    :    首页fragment
@@ -25,12 +26,23 @@ class HomeFragment : BaseFragment(){
         return R.layout.frag_home
     }
 
-    override fun initEventAndData(view: View?) {
+    override fun initInject(savedInstanceState: Bundle?) {
 
     }
 
-    override fun initInject(savedInstanceState: Bundle?) {
 
+    override fun initEventAndData(view: View?) {
+        initView()
+    }
+
+    private fun initView() {
+        this.iv_tab_manager.setOnClickListener {
+            (_mActivity as BaseActivity).start(HomeTabManagerFragment.newInstance())
+        }
+
+        this.iv_share_article.setOnClickListener {
+            (_mActivity as BaseActivity).start(ShareArticleFragment.newInstance())
+        }
     }
 
     override fun onBackPressedSupport(): Boolean {

@@ -1,7 +1,5 @@
 package com.jetictors.futures.juejin_kotlin.app
 
-import android.app.Application
-import android.content.Context
 import android.content.res.Configuration
 import android.support.v7.app.AppCompatDelegate
 
@@ -11,47 +9,47 @@ import com.jetictors.futures.common.base.BaseApplication
 import com.jetictors.futures.common.utils.ApplicationLike
 import com.jetictors.futures.common.utils.AsLibUtil
 
+
 /**
- * 创建者：邓浩宸
- * 时间 ：2017/3/21 10:51
- * 描述 ：app 初始化
+ * 描述    : app 初始化
+ * author  : Jetictors
+ * time    :  2018/1/29 17:19
+ * version : v1.0.1
  */
 class App : BaseApplication() {
 
-//    @Autowired(name = "/home/applicationFirst")
-//    internal var mApplicationLikeModuleFirst: ApplicationLike? = null
-//    @Autowired(name = "/boil/applicationSecond")
-//    internal var mApplicationLikeModuleSecond: ApplicationLike? = null
-//    @Autowired(name = "/find/applicationThird")
-//    internal var mApplicationLikeModuleThird: ApplicationLike? = null
-//    @Autowired(name = "/mime/applicationFourth")
-//    internal var mApplicationLikeModuleFourth: ApplicationLike? = null
+    @Autowired(name = "/home/applicationFirst")
+    private var mApplicationLikeModuleFirst: ApplicationLike? = null
+    @Autowired(name = "/boil/applicationSecond")
+    private var mApplicationLikeModuleSecond: ApplicationLike? = null
+    @Autowired(name = "/find/applicationThird")
+    private var mApplicationLikeModuleThird: ApplicationLike? = null
+    @Autowired(name = "/mime/applicationFourth")
+    private var mApplicationLikeModuleFourth: ApplicationLike? = null
 
     override fun onCreate() {
         super.onCreate()
 
-//        ARouter.init(this)
 //        ARouter.getInstance().inject(this)
 
-//        if (mApplicationLikeModuleFirst != null) {
-//            AsLibUtil.addAsLIbChild(mApplicationLikeModuleFirst)
-//        }
-//
-//        if (mApplicationLikeModuleSecond != null) {
-//            AsLibUtil.addAsLIbChild(mApplicationLikeModuleSecond)
-//        }
-//
-//        if (mApplicationLikeModuleThird != null) {
-//            AsLibUtil.addAsLIbChild(mApplicationLikeModuleThird)
-//        }
-//
-//        if (mApplicationLikeModuleFourth != null) {
-//            AsLibUtil.addAsLIbChild(mApplicationLikeModuleFourth)
-//        }
+        if (mApplicationLikeModuleFirst != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleFirst)
+        }
+
+        if (mApplicationLikeModuleSecond != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleSecond)
+        }
+
+        if (mApplicationLikeModuleThird != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleThird)
+        }
+
+        if (mApplicationLikeModuleFourth != null) {
+            AsLibUtil.addAsLIbChild(mApplicationLikeModuleFourth)
+        }
 
         AsLibUtil.doCreateAsLibrary(this)
     }
-
 
     override fun onLowMemory() {
         super.onLowMemory()
@@ -75,16 +73,8 @@ class App : BaseApplication() {
 
     companion object {
 
-        val instance: BaseApplication
-            @Synchronized get() = instance
-
         init {
-            AppCompatDelegate.setDefaultNightMode(
-                    AppCompatDelegate.MODE_NIGHT_NO)
-        }
-
-        fun app(context: Context): App {
-            return context.applicationContext as App
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
     }
 

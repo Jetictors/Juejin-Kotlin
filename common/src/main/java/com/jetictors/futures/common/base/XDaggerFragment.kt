@@ -3,7 +3,6 @@ package com.jetictors.futures.common.base
 import android.content.Context
 import android.os.Bundle
 import android.view.View
-import com.jetictors.futures.common.base.mvp.BasePresenter
 
 import com.jetictors.futures.common.base.mvp.IBasePresenter
 import com.jetictors.futures.common.base.mvp.IBaseView

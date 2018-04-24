@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.view.Window
 import com.jetictors.futures.common.base.BaseActivity
+import com.jetictors.futures.common.utils.logger.KLog
 import com.jetictors.futures.juejin_kotlin.R
 
 class MainActivity : BaseActivity() {

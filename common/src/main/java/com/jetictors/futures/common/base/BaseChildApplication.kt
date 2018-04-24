@@ -3,6 +3,7 @@ package com.jetictors.futures.common.base
 import android.app.Application
 import android.content.Context
 import android.content.res.Configuration
+import android.util.Log
 
 import com.jetictors.futures.common.utils.ApplicationLike
 import com.jetictors.futures.common.utils.logger.KLog
@@ -66,6 +67,8 @@ open class BaseChildApplication : BaseApplication(), ApplicationLike {
     override fun init(context: Context) {
 
     }
+
+
 
 
 }

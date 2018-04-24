@@ -14,9 +14,6 @@ import com.jetictors.futures.mime.R
 class TabManagerFragment : BaseFragment(){
 
     companion object {
-
-
-
         fun newInstance() = TabManagerFragment()
     }
 
